@@ -1,0 +1,653 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: theDownload;
+    src: url(./Finland\ Rounded\ Thin.ttf);
+}
+
+@font-face {
+    font-family: borg;
+    src: url(./Borg.ttf);
+}
+
+@font-face {
+    font-family: norwester;
+    src: url(./norwester.ttf);
+}
+
+body {
+    font-size: 16px;
+    padding: 0;
+    margin:0;
+    font-family: theDownload;
+    font-weight: 400;
+    opacity: 1;
+}
+
+.pureStick {
+    position: fixed;
+    top:0;
+    overflow: hidden;
+    /* height: 33vh;
+    min-height: 200px; */
+}
+
+  .pureStick ~ .mainContainer:nth-of-type(1) {
+    border: 20px solid green;
+    /* padding-top: 60px; */
+  }
+
+/* .pureStick .mealMenu a  {
+    font-size: .8rem; 
+    display:flex;
+    flex-flow:column wrap;
+  }
+
+  .pureStick .title h1, .pureStick .title h3, .pureStick .title h5 {
+    font-size: 1rem;
+    padding: 0;
+  } */
+
+header {
+    border: 16px solid black;
+        box-sizing: border-box;
+        height: 100vh;
+        top:0;
+        background: blanchedalmond;
+        z-index: 2;
+        display:flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
+        padding-bottom: 25px;
+        transition: 0.5s;
+        text-align: center;
+        width: 100%;
+}
+
+.title h1 {
+    font-size: .5rem;
+    margin-left:-3px;
+    line-height: 5rem; 
+    padding: 15px;
+}
+
+.title h3 {
+    margin:0;
+    font-size: 2.5rem;
+}
+
+.title h5 {
+    margin:0;
+    font-size: 1.5rem;
+    font-family: norwester;
+}
+
+
+.foodPic img {
+    /* height:100%; */
+    height:100vh;
+    object-fit: cover;
+    width:100vw;    
+}
+
+.foodPic {
+    overflow: hidden;
+    /* width:100vw; */
+    max-height:100vh;
+    /* min-height:500px; */
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;   
+    overflow: none;
+}
+
+.foodPic .foodText {
+    position: absolute;
+    top:10%;
+    font: 3rem norwester; 
+    color: blanchedalmond; 
+    width:auto;
+}
+
+.foodText > * {
+    text-align: center;
+    color: #fff;
+    font-size: 5rem;
+ 
+}
+
+.foodText p {
+    font-size:2rem;
+    font-weight:800;
+    font-family: theDownload;
+    margin-bottom: 70px;
+
+}
+
+.mealMenu li {
+    padding:10px 0px;
+    list-style-type: none;
+    width: 100%;
+    border-bottom: 2px solid black;
+}
+
+.mealMenu a {
+    font: 2.5rem norwester;
+    color: black;
+    text-decoration: none;
+}
+
+.mealMenu p:hover, .mealMenu li a:hover{
+    color:rgba(231, 164, 64);
+    transition: .3s ease;
+}
+
+.mealMenu p:hover:after, .mealMenu li:hover:after {
+    color:rgba(231, 164, 64);
+    margin-left: 5px;
+}
+
+.theSocials {
+    padding:20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 1.1rem;
+    margin-bottom:20px;
+}
+
+
+
+footer {
+    display: flex;
+    background: hsl(36, 37%, 75%);
+    text-align: center;
+    justify-content: space-between;
+    /* padding: 0px 100px; */
+}
+
+
+footer > div {
+    font-size: 2rem;
+    width:100%;
+}
+
+.aboutUs {
+    display:flex;
+    padding:30px;
+    flex-flow: row wrap;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.generalInfo {
+    font-size: 2rem;
+    /* margin: 0px 200px; */
+}
+
+.aboutUs a {
+    text-decoration: none;
+    color:black;
+    padding: 10px 20px;
+    font: 1rem norwester;
+}
+
+.contactUs {
+    width: 100%;
+ }
+
+.openingTimes {
+    display:none;
+}
+
+.sideNav {
+    height: 100vh;
+    width: 100%;
+    background-color: blanchedalmond;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding: 60px 0px;
+    font: 2rem norwester; 
+}
+
+.sideNav a {
+    color: black;
+    text-decoration: none;   
+}
+
+.sideNav h1 {
+    padding:0px 60px;
+ }
+
+
+.sideNav a:hover {
+    transition: 0.5s;
+    color:rgba(231, 164, 64);
+    text-decoration: none;
+}
+
+
+@media (min-width: 480px), (max-width: 1500px) {
+    .mealMenu li {
+       font-size: calc( 1.5rem + 0.25vw);
+     }
+   }
+ 
+@media (min-width: 480px), (max-width: 1500px) {
+     .title h1 {
+        font-size: calc( 6rem + 5vw);
+      }
+    }
+
+@media (min-width: 600px) {
+
+    .title {
+        padding:20px;
+        /* max-width:440px; */
+        width:25%;
+    }
+    
+    .title h1 {
+        font-size:6.5rem;
+        margin-left:-3px;
+        line-height: 5rem;
+        padding: 0px;
+    }
+    
+    .title h3 {
+        margin:0;
+        font-size: 2rem;
+    }
+    
+    .title h5 {
+        margin:0;
+        font-size: 1.2rem;
+        /* font-size: 1vw; */
+        /* letter-spacing: .25rem; */
+        font-family: norwester;
+    }
+    
+    
+    
+    .title span {
+        color:#fff;
+    }
+    
+    .theSocials {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        width: 200px;
+        font-size: 1.1rem;
+    }
+    
+    .theSocials i:hover {
+            transition: 0.5s;
+            color:rgba(231, 164, 64);
+            /* text-decoration: none; */
+    }
+    
+    .info {
+        position: absolute;
+        width:auto;    
+    }
+    
+    .mainContainer {
+        width:100%;
+        scroll-snap-align: start;
+        overflow: hidden;
+        z-index:2000;
+        background-color: blanchedalmond;
+        /* background-color: rgba(122, 122, 240, 0.5); */
+    }
+    
+    .mealMenu {
+        font: 2rem norwester;
+        text-transform: uppercase;
+        padding:20px;
+        width:100%;
+        display:flex;
+        flex-flow: row nowrap;
+    }
+    
+    .mealMenu li {
+        padding:10px 0px;
+        list-style-type: none;
+    }
+    
+    .mealMenu p:hover, .mealMenu li a:hover{
+        color:rgba(231, 164, 64);
+        transition: .3s ease;
+    }
+    
+    .mealMenu p:hover:after, .mealMenu li:hover:after {
+        content:" -";
+        color:rgba(231, 164, 64);
+        margin-left: 5px;
+    }
+    
+    .mealMenu a {
+        color: black;
+        text-decoration: none;
+    }
+    
+    .foodPic img {
+        /* height:100%; */
+        object-fit: cover;
+        /* width:100%; */
+        
+    }
+    
+    .foodPic {
+        overflow: hidden;
+        height:100vh;
+        position: relative;
+        width:100vw;
+        overflow-x:hidden;
+        display:flex;
+        justify-content: center;
+        align-items: center;   
+    }
+    
+    .foodPic .foodText {
+        position: absolute;
+        top:10%;
+        font: 3rem norwester; 
+        color: blanchedalmond; 
+        margin-left:250px;
+        width:auto;
+        /* border: 2px solid green; */
+        /* z-index: 10; */
+        /* mix-blend-mode: difference; */
+    }
+    
+    .foodText > * {
+        text-align: center;
+        color: #fff;
+        font-size: 5rem;
+        /* background:white;
+        -webkit-text-fill-color: black; */
+        
+    }
+    
+    .foodText p {
+        font-size:2rem;
+        font-weight:800;
+        font-family: theDownload;
+        margin-bottom: 70px;
+    
+    }
+    
+    header {
+        position: fixed;
+        /* height:100vh; */
+        top:0;
+        padding: 10px;
+        z-index:10;
+        background: blanchedalmond;
+        display:flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
+        clip-path: polygon(0% 0%, 35% 0%, 15% 100%, 0% 100%);
+        transition: 0.5s;
+        text-align: left;
+        width:1300px;
+    }
+    
+    .openingTimes {
+        /* font-size:16px; */
+        font-size:8px;
+        font-family: norwester;   
+        margin-left:150px;
+        padding:20px;
+        z-index: 3;
+        box-shadow: 14px 18px 19px -6px rgba(0,0,0,0.75);
+    }
+    
+    .openingTimes h3 {
+        font-size: 7rem; 
+        /* font-size: 3.5rem;  */
+        font-family: norwester;  
+        margin:0;
+        text-transform: uppercase; 
+    }
+    
+    .openingTimes p {
+        font-size: 3rem;
+        /* font-size: 1.5rem; */
+        text-transform: uppercase; 
+    }
+    .openGrid > div {
+        height:auto;
+        align-items: flex-start;
+    }
+    
+    .openGrid > div > div > p {
+        margin:0;
+        padding:0;
+    }
+    
+    .openDay {
+        text-align:right;
+    }
+    
+    .openHours p {
+        font-size: 10.7rem;
+        /* font-size: 5.35rem; */
+    }
+    
+    .openHours {
+        padding:0;
+        margin:0;
+    }
+    
+    .levelUp {
+        line-height: 165px;
+    }
+    
+    .boost p {
+        font-size: 5rem;
+        /* font-size: 2.5rem; */
+    }
+    
+    .openGrid {
+        display:flex;
+        flex-flow: column nowrap;
+    }
+    
+    .gridSection {
+        display:flex;
+        align-items: center;
+        width:auto;
+        vertical-align: text-bottom;
+    }
+    
+    .split {
+        flex-flow:column wrap;
+    }
+    p .times {
+        font-size: 10rem;
+    }
+    
+    .navi {
+        margin: 10px;
+        position: fixed;
+        right: 45%;
+    }
+    
+    .navi:hover {
+        color:rgba(128, 128, 128, 0.4);
+    }
+    
+    .down {
+        bottom: 0;
+    }
+    
+    
+    footer {
+        display: flex;
+        background: hsl(36, 37%, 75%);
+        text-align: center;
+        justify-content: space-between;
+        padding: 0px 100px;
+    }
+    
+    
+    footer > div {
+        font-size: 2rem;
+        width:100%;
+    }
+    
+    .aboutUs {
+        display:flex;
+        padding:30px;
+        flex-flow: row wrap;
+        justify-content: center;
+        list-style-type: none;
+    }
+    
+    .generalInfo {
+        font-size: 2rem;
+        /* margin: 0px 200px; */
+    }
+    
+    .aboutUs a {
+        text-decoration: none;
+        color:black;
+        padding: 10px 20px;
+        font: 1rem norwester;
+    }
+    
+    .aboutUs a:hover {
+        color:blanchedalmond;
+    }
+    
+    main {
+        /* height:100vh; */
+        transition: 0.5s;
+        /* scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+        position: relative; */
+    }
+    
+    .close a:hover {
+        color:rgba(231, 164, 64);
+        transition: .3s ease;
+    }
+    
+    
+    
+    
+    .close {
+        position: fixed;
+        bottom: 100px;
+        right: 80px;
+        height: 0px;
+        width: 30px;
+        z-index: 10000;
+        opacity:0;
+    }
+    
+    .close a {
+        font-size: 10rem;
+        font-weight:900;
+        color:black;
+        text-decoration: none;
+    }
+    
+    .sideNav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: blanchedalmond;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        font: 3rem norwester; 
+    }
+    .sideNav a {
+        color: black;
+        text-decoration: none;   
+    }
+    
+    .sideNav h1 {
+        padding:0px 60px;
+     }
+    
+    
+
+    .openDay:hover + .openHours  {
+        color:blanchedalmond;
+        transition: 0.5s;
+      }
+    
+    
+        
+    .hide4now {
+        object-fit: cover;
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        display:none;
+    }
+    
+    
+    
+    a[name='orderFoodPart'] div {
+        border: 5px solid green;
+    }   
+    
+    .parallax {
+        background-image: url("owner3.jpg");
+    
+        /* Set a specific height */
+        min-height: 500px; 
+      
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .parallax2 {
+        background-image: url("owner2.jpg");
+    
+        /* Set a specific height */
+        min-height: 500px; 
+      
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .contactUs {
+       width: 100%;
+       /* padding: 30px; */
+    }
+    
+    .keepInTouch {
+        padding:30px;
+    }
+    
+    .keepInTouch p {
+        font-size: 3rem;
+    }
+    
+}
+
+
+
+
