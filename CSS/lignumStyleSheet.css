@@ -480,19 +480,7 @@ footer>div {
         font-size: 10rem;
     }
 
-    .navi {
-        margin: 10px;
-        position: fixed;
-        right: 45%;
-    }
 
-    .navi:hover {
-        color: rgba(128, 128, 128, 0.4);
-    }
-
-    .down {
-        bottom: 0;
-    }
 
 
     footer {
@@ -594,17 +582,6 @@ footer>div {
         transition: 0.5s;
     }
 
-
-
-    .hide4now {
-        object-fit: cover;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: none;
-    }
 
 
 
