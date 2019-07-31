@@ -1,25 +1,26 @@
 function openNav() {
-  document.getElementById("sideNav").style.width = "68%";
+  document.getElementById("foodmenu").style.width = "68%";
   document.getElementById("main").style.marginLeft = "66%";
-  document.getElementById("closeIcon").style.opacity = "1";
+  document.getElementById("foodmenu-btn-close").style.opacity = "1";
   // document.getElementById("main").style.backgroundColor = "rgba(0,0,0,0.4)";
   // document.getElementsByClassName("pic").style.backgroundColor = "rgba(255,255,255,0.5)";
+
 }
 
 function closeNav() {
-  document.getElementById("sideNav").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-  document.getElementById("closeIcon").style.opacity = "0";
+  document.getElementById("foodmenu").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+  document.getElementById("foodmenu-btn-close").style.opacity = "0";
   // document.getElementById("main").style.backgroundColor = "rgba(255, 235, 205, 1)";
   // document.getElementById("pic").style.opacity = "1";
   // document.getElementsByClassName("pic").style.opacity = "1";
-    // document.getElementsByTagName("img").style.opacity = "1";
-    // document.getElementById("pic").style.backgroundColor = "none";
+  // document.getElementsByTagName("img").style.opacity = "1";
+  // document.getElementById("pic").style.backgroundColor = "none";
 
 }
 
 function lockArff() {
-  var mealMenu = document.getElementById('mealMenu');
+  var mealMenu = document.getElementById('restaurant-navigation');
   mealMenu.classList.toggle('shutter');
 
 }
@@ -27,10 +28,8 @@ function lockArff() {
 
 
 
-window.onscroll = function() {
-  // myFunction()
+window.onscroll = function () {
   console.log('beep');
-
 };
 
 // Get the navbar
