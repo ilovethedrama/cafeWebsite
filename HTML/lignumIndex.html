@@ -4,222 +4,207 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
 <html class="no-js">
-  <!--<![endif]-->
+<!--<![endif]-->
 
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Lignum V. Caribbean Cafe</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="../CSS/lignumStyleSheet.css" />
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Lignum V. Caribbean Cafe</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../CSS/lignumStyleSheet.css" />
+  <!-- <link rel="stylesheet" href="../CSS/u1.css" /> -->
+  <!-- <link rel="stylesheet" href="../CSS/u2.css" />  -->
+  <!-- <link rel="stylesheet" href="../CSS/u3.css" /> -->
+  <!-- <link rel="stylesheet" href="../CSS/u4.css" /> -->
+  <!-- <link rel="stylesheet" href="../CSS/u5.css" /> -->
 
-  <body>
-    <!-- [if lt IE 7]>
+</head>
+
+<body>
+  <!-- [if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-    <div id="foodmenu" class="foodmenu">
-      <h1><a href="#" class="foodmenu__item">Starters</a></h1>
-      <h1><a href="#" class="foodmenu__item">Mains </a></h1>
-      <h1><a href="#" class="foodmenu__item">Desserts</a></h1>
-      <h1><a href="#" class="foodmenu__item">Sides</a></h1>
-      <h1><a href="#" class="foodmenu__item">Drinks</a></h1>
-    </div>
+  <div id="foodmenu" aria-haspopup="true" class="foodmenu">
+    <div class="foodmenuContainer">
+      <h1 class="foodmenu__item"><a href="#">Starters</a></h1>
+      <h1 class="foodmenu__item"><a href="#">Mains </a></h1>
+      <h1 class="foodmenu__item"><a href="#">Desserts</a></h1>
+      <h1 class="foodmenu__item"><a href="#">Sides</a></h1>
+      <h1 class="foodmenu__item"><a href="#">Drinks</a></h1>
 
-    <main id="main">
       <p id="foodmenu-btn-close" class="foodmenu__btn--close">
         <a href="javascript:void(0)" onclick="closeNav()">&times;</a>
       </p>
-      <header class="pureStick">
-        <div class="restaurant__title">
-          <h1 class="restaurant__title--name">Lignum <span>V.</span></h1>
-          <h3 class="restaurant__title--desc">Contemporary Caribbean Cafe</h3>
-          <h5 class="restaurant__title--addy">75 Middlewood Road, Sheffield</h5>
-        </div>
+    </div>
+  </div>
 
-        <div class="restaurant-navigation" id="restaurant-navigation">
-          <li
-            class="restaurant-navigation__link"
-            onclick="lockArff();openNav()"
-          >
-            <a href="javascript:void(0)"> Menu</a>
-          </li>
-          <li class="restaurant-navigation__link">
-            <a href="#orderFoodPart" onclick="lockArff();closeNav()"
-              >Order Food</a
-            >
-          </li>
-          <li class="restaurant-navigation__link">
-            <a href="#openingTimesPart" onclick="lockArff();closeNav()"
-              >Opening Times</a
-            >
-          </li>
-          <li class="restaurant-navigation__link">
-            <a href="#eventsPart" onclick="lockArff();closeNav()">Events</a>
-          </li>
-          <li class="restaurant-navigation__link">
-            <a href="#aboutUsPart" onclick="lockArff();closeNav()">About Us</a>
-          </li>
-        </div>
-        <div class="social-media-menu" id="social-media-menu">
-          <i class="social-media-menu__icon fab fa-twitter"></i>
-          <i class="social-media-menu__icon fab fa-instagram"></i>
-          <i class="social-media-menu__icon fab fa-facebook"></i>
-          <i class="social-media-menu__icon fab fa-youtube"></i>
-        </div>
+  <header class="">
+    <div class="restaurant__title">
+      <h1 class="restaurant__title--name">Lignum <span>V.</span></h1>
+      <h3 class="restaurant__title--desc">Contemporary Caribbean Cafe</h3>
+      <h5 class="restaurant__title--addy">75 Middlewood Road, Sheffield</h5>
+    </div>
 
-        <div
-          class="sidenav__button--close"
-          id="sidenav__button--close"
-          onclick="lockArff()"
-        >
-          <i class="fas fa-bars fa-2x"></i>
-        </div>
-      </header>
+    <div class="restaurant-navigation" aria-haspopup="true" id="restaurant-navigation">
+      <li class="restaurant-navigation__link" onclick="openNav()">
+        <!-- <li class="restaurant-navigation__link" onclick="lockArff();openNav()"> -->
+        <a href="javascript:void(0)"> Menu</a>
+      </li>
+      <!-- <li class="restaurant-navigation__link--shadow">Menu</li> -->
+      <li class="restaurant-navigation__link">
+        <a href="#orderFoodPart" onclick="lockArff();closeNav()">Order Food</a>
+      </li>
+      <!-- <li class="restaurant-navigation__link--shadow">Order Food</li> -->
+      <li class="restaurant-navigation__link">
+        <a href="#openingTimesPart" onclick="lockArff();closeNav()">Opening Times</a>
+      </li>
+      <!-- <li class="restaurant-navigation__link--shadow">Opening Times</li> -->
+      <li class="restaurant-navigation__link">
+        <a href="#eventsPart" onclick="lockArff();closeNav()">Events</a>
+      </li>
+      <!-- <li class="restaurant-navigation__link--shadow">Events</li> -->
+      <li class="restaurant-navigation__link">
+        <a href="#aboutUsPart" onclick="lockArff();closeNav()">About Us</a>
+      </li>
+      <!-- <li class="restaurant-navigation__link--shadow">About Us</li> -->
+    </div>
 
-      <section class="restaurant-info">
-        <div class="restaurant-info-content-container">
-          <div class="restaurant-info__text">boooo</div>
-          <img
-            class="restaurant-info__img"
-            src="../Media/plantain.jpg"
-            alt="image of Lignum V. dumplings and fried chicken on a plate of fresh pineapple salad"
-          />
-        </div>
-      </section>
-      <section class="restaurant-info">
-        <a name="orderFoodPart"></a>
-        <div class="restaurant-info-content-container">
-          <div class="restaurant-info__text">
-            <h1>Collection only</h1>
-            <p>(*For now...)</p>
-            <h3>
-              Call on <br />
-              07777777777
-            </h3>
-          </div>
-          <img
-            class="restaurant-info__img"
-            src="../Media/foodCollection2.jpg"
-            alt="Lignum V. Caribbean Cafe owners Marcia and Florence pose outside the store in Hillsborough"
-          />
-        </div>
-      </section>
-      <section class="restaurant-info">
-        <a name="openingTimesPart"></a>
-        <div class="restaurant-info-content-container">
-          <div class="openingTimes info">
-            <h3>Opening Times</h3>
+    <div class="social-media-menu" id="social-media-menu">
+      <i class="social-media-menu__icon fab fa-twitter"></i>
+      <i class="social-media-menu__icon fab fa-instagram"></i>
+      <i class="social-media-menu__icon fab fa-facebook"></i>
+      <i class="social-media-menu__icon fab fa-youtube"></i>
+    </div>
 
-            <div class="openGrid">
-              <div class="gridSection">
-                <div class="openDay">
-                  <p>
-                    Tuesday<br />
-                    Thursday<br />
-                    Saturday
-                  </p>
-                </div>
-                <div class="openHours levelUp">
-                  <p>12-8pm</p>
-                </div>
+    <div class="sidenav__button--close" id="sidenav__button--close" onclick="lockArff()">
+      <i class="fas fa-bars fa-2x"></i>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- <p id="foodmenu-btn-close" class="foodmenu__btn--close">
+      <a href="javascript:void(0)" onclick="closeNav()">&times;</a>
+    </p> -->
+
+    <section class="restaurant-info">
+      <div class="restaurant-info-content-container">
+        <div class="restaurant-info__text">boooo</div>
+        <video autoplay="autoplay" loop muted poster="../Media/pineapple.jpg" class="restaurant-navigation__vid--large"
+          alt="image of Lignum V. dumplings and fried chicken on a plate of fresh pineapple salad">
+          <source src="../Media/fruitybowl.mp4" type="video/mp4" />
+        </video>
+        <!-- <img class="restaurant-info__img" src="../Media/plantain.jpg"
+          alt="image of Lignum V. dumplings and fried chicken on a plate of fresh pineapple salad" /> -->
+      </div>
+    </section>
+    <section class="restaurant-info">
+      <a name="orderFoodPart"></a>
+      <div class="restaurant-info-content-container">
+        <div class="restaurant-info__text">
+          <h1>Collection only</h1>
+          <p>(*For now...)</p>
+          <h3>
+            Call on <br />
+            07777777777
+          </h3>
+        </div>
+        <img class="restaurant-info__img" src="../Media/foodCollection2.jpg"
+          alt="Lignum V. Caribbean Cafe owners Marcia and Florence pose outside the store in Hillsborough" />
+      </div>
+    </section>
+    <section class="restaurant-info">
+      <a name="openingTimesPart"></a>
+      <div class="restaurant-info-content-container">
+        <!-- <div class="openingTimes info">
+          <h3>Opening Times</h3>
+
+          <div class="openGrid">
+            <div class="gridSection">
+              <div class="openDay">
+                <p>
+                  Tuesday<br />
+                  Thursday<br />
+                  Saturday
+                </p>
               </div>
-              <div class="gridSection split">
-                <div class="openDay boost">
-                  <p class="">Wednesday & Friday</p>
-                </div>
-                <div class="openHours">
-                  <p>12pm-6pm</p>
-                </div>
+              <div class="openHours levelUp">
+                <p>12-8pm</p>
+              </div>
+            </div>
+            <div class="gridSection split">
+              <div class="openDay boost">
+                <p class="">Wednesday & Friday</p>
+              </div>
+              <div class="openHours">
+                <p>12pm-6pm</p>
               </div>
             </div>
           </div>
+        </div> -->
 
-          <img
-            src="../Media/drink2.jpg"
-            alt="image of Lignum V. dumplings and fried chicken on a plate of fresh pineapple salad"
-          />
+        <img class="restaurant-info__img" src="../Media/drink2.jpg"
+          alt="image of Lignum V. dumplings and fried chicken on a plate of fresh pineapple salad" />
+      </div>
+    </section>
+    <section class="restaurant-info">
+      <a name="eventsPart"></a>
+      <div class="restaurant-info-content-container">
+        <div class="restaurant-info__text">boooo</div>
+        <img class="restaurant-info__img" src="../Media/partyFood.jpg"
+          alt="Lignum V. Caribbean Cafe owners Marcia and Florence pose outside the store in Hillsborough" />
+      </div>
+    </section>
+    <section class="restaurant-info parallax"></section>
+    <section class="restaurant-info">
+      <a name="aboutUsPart"></a>
+      <div class="restaurant-info-content-container">
+        <div class="restaurant-info__text">boooo</div>
+        <img class="restaurant-info__img" src="../Media/owner.jpg"
+          alt="Lignum V. Caribbean Cafe owners Marcia and Florence pose outside the store in Hillsborough" />
+      </div>
+    </section>
+    <section class="restaurant-info parallax2"></section>
+    <footer>
+      <!-- <div>
+        <div class="keep-in-touch-section">
+          <h2>Find Us Here :</h2>
+          <p class="keep-in-touch-section__addy">
+            75 Middlewood Road, Sheffield
+          </p>
         </div>
-      </section>
-      <section class="restaurant-info">
-        <a name="eventsPart"></a>
-        <div class="restaurant-info-content-container">
-          <div class="restaurant-info__text">boooo</div>
-          <img
-            class="restaurant-info__img"
-            src="../Media/partyFood.jpg"
-            alt="Lignum V. Caribbean Cafe owners Marcia and Florence pose outside the store in Hillsborough"
-          />
+        <div class="contactUs">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!4v1554423663618!6m8!1m7!1svpXyV4iffyrqcJqJ0VSmmQ!2m2!1d53.40448830463059!2d-1.503681827979155!3f225.32783694440715!4f-0.9322786924586239!5f0.7820865974627469"
+            width="350" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
-      </section>
-      <section class="restaurant-info parallax"></section>
-      <section class="restaurant-info">
-        <div class="restaurant-info-content-container">
-          <div class="restaurant-info__text">boooo</div>
-          <img
-            class="restaurant-info__img"
-            src="../Media/owner.jpg"
-            alt="Lignum V. Caribbean Cafe owners Marcia and Florence pose outside the store in Hillsborough"
-          />
+        <div class="generalInfo">
+          <ul class="sitemap-section">
+            <li>
+              <a class="sitemap-section__link" href="javascript:void(0)">
+                Menu</a>
+            </li>
+            <li>
+              <a class="sitemap-section__link" href="#orderFoodPart">Order Food</a>
+            </li>
+            <li>
+              <a class="sitemap-section__link" href="#openingTimesPart">Opening Times</a>
+            </li>
+            <li>
+              <a class="sitemap-section__link" href="#eventsPart">Events</a>
+            </li>
+            <li>
+              <a class="sitemap-section__link" href="#aboutUsPart">About Us</a>
+            </li>
+          </ul>
         </div>
-      </section>
-      <section class="restaurant-info parallax2"></section>
-      <footer>
-        <div>
-          <div class="keep-in-touch-section">
-            <h2>Find Us Here :</h2>
-            <p class="keep-in-touch-section__addy">
-              75 Middlewood Road, Sheffield
-            </p>
-          </div>
-          <div class="contactUs">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!4v1554423663618!6m8!1m7!1svpXyV4iffyrqcJqJ0VSmmQ!2m2!1d53.40448830463059!2d-1.503681827979155!3f225.32783694440715!4f-0.9322786924586239!5f0.7820865974627469"
-              width="350"
-              height="300"
-              frameborder="0"
-              style="border:0"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <div class="generalInfo">
-            <ul class="sitemap-section">
-              <li>
-                <a class="sitemap-section__link" href="javascript:void(0)">
-                  Menu</a
-                >
-              </li>
-              <li>
-                <a class="sitemap-section__link" href="#orderFoodPart"
-                  >Order Food</a
-                >
-              </li>
-              <li>
-                <a class="sitemap-section__link" href="#openingTimesPart"
-                  >Opening Times</a
-                >
-              </li>
-              <li>
-                <a class="sitemap-section__link" href="#eventsPart">Events</a>
-              </li>
-              <li>
-                <a class="sitemap-section__link" href="#aboutUsPart"
-                  >About Us</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </footer>
-    </main>
-    <script src="../JS/lignumJS.js" async defer></script>
-  </body>
+      </div> -->
+    </footer>
+  </main>
+  <script src="../JS/lignumJS.js" async defer></script>
+</body>
+
 </html>
