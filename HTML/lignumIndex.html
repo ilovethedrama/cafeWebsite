@@ -15,12 +15,6 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
   <link rel="stylesheet" href="../CSS/lignumStyleSheet.css" />
-  <!-- <link rel="stylesheet" href="../CSS/u1.css" /> -->
-  <!-- <link rel="stylesheet" href="../CSS/u2.css" />  -->
-  <!-- <link rel="stylesheet" href="../CSS/u3.css" /> -->
-  <!-- <link rel="stylesheet" href="../CSS/u4.css" /> -->
-  <!-- <link rel="stylesheet" href="../CSS/u5.css" /> -->
-
 </head>
 
 <body>
@@ -50,37 +44,48 @@
     </div>
 
     <div class="restaurant-navigation" aria-haspopup="true" id="restaurant-navigation">
-      <li class="restaurant-navigation__link" onclick="openNav()">
-        <!-- <li class="restaurant-navigation__link" onclick="lockArff();openNav()"> -->
-        <a href="javascript:void(0)"> Menu</a>
-      </li>
-      <!-- <li class="restaurant-navigation__link--shadow">Menu</li> -->
       <li class="restaurant-navigation__link">
-        <a href="#orderFoodPart" onclick="lockArff();closeNav()">Order Food</a>
+        <a href="#orderFoodPart"> Menu</a>
       </li>
-      <!-- <li class="restaurant-navigation__link--shadow">Order Food</li> -->
+      <li class="restaurant-navigation__link--shadow">
+        Check out the flavour
+      </li>
       <li class="restaurant-navigation__link">
-        <a href="#openingTimesPart" onclick="lockArff();closeNav()">Opening Times</a>
+        <a href="#orderFoodPart">Order Food</a>
       </li>
-      <!-- <li class="restaurant-navigation__link--shadow">Opening Times</li> -->
+      <li class="restaurant-navigation__link--shadow">
+        & Make your belly happy
+      </li>
       <li class="restaurant-navigation__link">
-        <a href="#eventsPart" onclick="lockArff();closeNav()">Events</a>
+        <a href="#openingTimesPart">Opening Times</a>
       </li>
-      <!-- <li class="restaurant-navigation__link--shadow">Events</li> -->
+      <li class="restaurant-navigation__link--shadow">Opening Times</li>
       <li class="restaurant-navigation__link">
-        <a href="#aboutUsPart" onclick="lockArff();closeNav()">About Us</a>
+        <a href="#eventsPart">Events</a>
       </li>
-      <!-- <li class="restaurant-navigation__link--shadow">About Us</li> -->
+      <li class="restaurant-navigation__link--shadow">
+        Event catering? We've got you
+      </li>
+      <li class="restaurant-navigation__link">
+        <a href="#aboutUsPart">About Us</a>
+      </li>
+      <li class="restaurant-navigation__link--shadow">
+        Learn about the lignum taste
+      </li>
     </div>
 
+    <div class="restaurant-navigation__img-container">
+      <img class="restaurant-navigation__img--mini" src="../Media/coconut.jpg" alt="" />
+    </div>
     <div class="social-media-menu" id="social-media-menu">
-      <i class="social-media-menu__icon fab fa-twitter"></i>
-      <i class="social-media-menu__icon fab fa-instagram"></i>
-      <i class="social-media-menu__icon fab fa-facebook"></i>
-      <i class="social-media-menu__icon fab fa-youtube"></i>
+      <i class="social-media-menu__icon fab fa-twitter" title='Jump into the conversation '></i>
+      <i class="social-media-menu__icon fab fa-instagram" title='Vibe out to our curated playlist'></i>
+      <i class="social-media-menu__icon fab fa-facebook" title='Stay up to date with the latest news'></i>
+      <i class="social-media-menu__icon fab fa-youtube" title='Find authentic recipes on our channel'></i>
+      <i class="social-media-menu__icon fab fa-spotify" title='Vibe out to our curated playlist'></i>
     </div>
 
-    <div class="sidenav__button--close" id="sidenav__button--close" onclick="lockArff()">
+    <div class="sidenav__button--close" id="sidenav__button--close">
       <i class="fas fa-bars fa-2x"></i>
     </div>
   </header>
@@ -92,26 +97,28 @@
 
     <section class="restaurant-info">
       <div class="restaurant-info-content-container">
+        <!-- <div class="text-container">
         <div class="restaurant-info__text">boooo</div>
+        </div> -->
         <video autoplay="autoplay" loop muted poster="../Media/pineapple.jpg" class="restaurant-navigation__vid--large"
           alt="image of Lignum V. dumplings and fried chicken on a plate of fresh pineapple salad">
           <source src="../Media/fruitybowl.mp4" type="video/mp4" />
         </video>
-        <!-- <img class="restaurant-info__img" src="../Media/plantain.jpg"
-          alt="image of Lignum V. dumplings and fried chicken on a plate of fresh pineapple salad" /> -->
       </div>
     </section>
     <section class="restaurant-info">
       <a name="orderFoodPart"></a>
       <div class="restaurant-info-content-container">
-        <div class="restaurant-info__text">
-          <h1>Collection only</h1>
-          <p>(*For now...)</p>
-          <h3>
-            Call on <br />
-            07777777777
-          </h3>
+        <div class="text-container">
+          <div class="restaurant-info__text">
+            <p>Collection only. </p><br />
+            <p>For Now.</p><br />
+            <p>Call 07777777777</p><br />
+            <p>to place your order.</p>
+          </div>
+
         </div>
+
         <img class="restaurant-info__img" src="../Media/foodCollection2.jpg"
           alt="Lignum V. Caribbean Cafe owners Marcia and Florence pose outside the store in Hillsborough" />
       </div>
@@ -119,41 +126,33 @@
     <section class="restaurant-info">
       <a name="openingTimesPart"></a>
       <div class="restaurant-info-content-container">
-        <!-- <div class="openingTimes info">
-          <h3>Opening Times</h3>
-
-          <div class="openGrid">
-            <div class="gridSection">
-              <div class="openDay">
-                <p>
-                  Tuesday<br />
-                  Thursday<br />
-                  Saturday
-                </p>
-              </div>
-              <div class="openHours levelUp">
-                <p>12-8pm</p>
-              </div>
-            </div>
-            <div class="gridSection split">
-              <div class="openDay boost">
-                <p class="">Wednesday & Friday</p>
-              </div>
-              <div class="openHours">
-                <p>12pm-6pm</p>
-              </div>
-            </div>
+        <div class="text-container">
+          <div class="restaurant-info__text">
+            <p>_Tuesday, Thursday & Saturday 12<span class='restaurant-info__text--superscript'> until
+              </span>8pm<strong></strong>.<br />
+              Wednesday & <strong></strong>Friday <br /> 12<span class='restaurant-info__text--superscript'> until
+              </span>6pm_.
           </div>
-        </div> -->
-
+        </div>
         <img class="restaurant-info__img" src="../Media/drink2.jpg"
           alt="image of Lignum V. dumplings and fried chicken on a plate of fresh pineapple salad" />
       </div>
+
     </section>
     <section class="restaurant-info">
       <a name="eventsPart"></a>
       <div class="restaurant-info-content-container">
-        <div class="restaurant-info__text">boooo</div>
+        <div class="text-container">
+          <div class="restaurant-info__text">
+            <p>Short loin chuck andouille, <strong>pork belly</strong> pancetta meatloaf <strong>prosciutto</strong>.
+              Turducken landjaeger kevin, pancetta hamburger chuck <strong>filet mignon</strong> shoulder ham hock
+              <strong>tongue</strong> chicken porchetta</p>
+            <!-- 
+              <p>Christmas Kwanza Diwali Graduation Batmitzfa<strong> New births</strong> Quincinera <strong>New Years Eve</strong> Groundation Day<strong>Easter</strong>Obon 
+                <strong>Gender Reveals</strong> Passover Aboakyere Ramadan<strong>Welcome Home</strong> House Parties
+               <strong>Anniversaries</strong> Weddings Paryushana Day of the Dead</p> -->
+          </div>
+        </div>
         <img class="restaurant-info__img" src="../Media/partyFood.jpg"
           alt="Lignum V. Caribbean Cafe owners Marcia and Florence pose outside the store in Hillsborough" />
       </div>
@@ -162,7 +161,11 @@
     <section class="restaurant-info">
       <a name="aboutUsPart"></a>
       <div class="restaurant-info-content-container">
-        <div class="restaurant-info__text">boooo</div>
+        <div class="text-container">
+          <div class="restaurant-info__text">
+            <p>boooo</p>
+          </div>
+        </div>
         <img class="restaurant-info__img" src="../Media/owner.jpg"
           alt="Lignum V. Caribbean Cafe owners Marcia and Florence pose outside the store in Hillsborough" />
       </div>
