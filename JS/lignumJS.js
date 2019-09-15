@@ -1,48 +1,55 @@
-function openNav() {
-  document.getElementById("foodmenu").style.width = "68%";
-  document.getElementById("main").style.marginLeft = "66%";
-  document.getElementById("foodmenu-btn-close").style.opacity = "1";
-  // document.getElementById("main").style.backgroundColor = "rgba(0,0,0,0.4)";
-  // document.getElementsByClassName("pic").style.backgroundColor = "rgba(255,255,255,0.5)";
+const restNavLinks = document.querySelectorAll(
+    ".restaurant-navigation__link a"
+  ),
+  sidenavBtnClose = document.querySelector(".sidenav__button--close"),
+  titleAddy = document.querySelector(".restaurant__title--addy"),
+  foodMenuClose = document.getElementById("foodmenu-btn-close"),
+  mealMenu = document.getElementById("restaurant-navigation"),
+  titleGroup = document.querySelector(".restaurant__title"),
+  socials = document.getElementById("social-media-menu"),
+  foodMenu = document.getElementById("foodmenu"),
+  header = document.querySelector("header"),
+  menuOption = restNavLinks[0];
 
+function lockArff() {
+  mealMenu.classList.toggle("shutter");
+  socials.classList.toggle("shutter");
+  header.classList.toggle("heightPush");
+}
+
+function openNav() {
+  foodMenuClose.style.opacity = "1";
+  foodMenu.style.width = "100%";
+  header.style.marginLeft = "100%";
 }
 
 function closeNav() {
-  document.getElementById("foodmenu").style.width = "0";
-  document.getElementById("main").style.marginLeft = "0";
-  document.getElementById("foodmenu-btn-close").style.opacity = "0";
-  // document.getElementById("main").style.backgroundColor = "rgba(255, 235, 205, 1)";
-  // document.getElementById("pic").style.opacity = "1";
-  // document.getElementsByClassName("pic").style.opacity = "1";
-  // document.getElementsByTagName("img").style.opacity = "1";
-  // document.getElementById("pic").style.backgroundColor = "none";
-
+  foodMenuClose.style.opacity = "0";
+  foodMenu.style.width = "0";
+  header.style.marginLeft = "0";
 }
 
-function lockArff() {
-  var mealMenu = document.getElementById('restaurant-navigation');
-  mealMenu.classList.toggle('shutter');
-
+for (var i = 0; i < restNavLinks.length; i++) {
+  restNavLinks[i].onclick = function() {
+    lockArff();
+    console.log("pie");
+  };
 }
 
-
-
-
-window.onscroll = function () {
-  console.log('beep');
+sidenavBtnClose.onclick = function() {
+  lockArff();
+  console.log("cherry");
 };
 
-// Get the navbar
-// var header = document.getElementsByTagName("header");
+menuOption.onclick = function() {
+  openNav();
+};
 
-// // Get the offset position of the navbar
-// var sticky = header.offsetTop;
-
-// // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-// function myFunction() {
-//   if (window.pageYOffset >= sticky) {
-//     header.classList.add("pureStick")
-//   } else {
-//     header.classList.remove("pureStick");
-//   }
+// function windowScaleDownMsg() {
+//   let currentSize =
+//     window.innerWidth < 600
+//       ? console.log("the foodmenu should be 100% and a block element")
+//       : console.log("the foodmenu should be 65% and a flex element");
 // }
+
+// window.addEventListener("resize", windowScaleDownMsg);
