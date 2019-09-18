@@ -202,6 +202,7 @@ header {
   flex-flow: column nowrap;
   justify-content: space-between;
   clip-path: polygon(0% 0%, 100% 0%, 70% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 70% 100%, 0% 100%);
   transition: 0.5s;
   text-align: left;
   overflow: none;
