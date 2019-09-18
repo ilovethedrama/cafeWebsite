@@ -1,4 +1,4 @@
-const port = process.env.port || 3000,
+const port = process.env.PORT || 3000,
     // bodyparser = require("body-parser"),
     // mongoose = require("mongoose"),
     path = require("path");
@@ -45,7 +45,7 @@ app.get("/", function (req, res) {
 });
 
 // app.get("*", (req, res) => {
-//     res.render("404", {
+//     res.render("404", { 
 //         root: __dirname
 //     });
 // });
@@ -58,4 +58,3 @@ app.listen(port, function () {
     console.log("You rockin now on port " + port);
     console.log(__dirname + "/HTML/lignumIndex.html");
 });
-
