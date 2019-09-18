@@ -359,7 +359,7 @@ a[name="orderFoodPart"] div {
 @media screen and (max-width: 1110px) {
   header {
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-    max-width: 45%;
+    max-width: 30%;
   }
 
   .restaurant-info__img {
