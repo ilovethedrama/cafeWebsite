@@ -5,13 +5,16 @@ const port = process.env.port || 3000,
 
 (express = require("express")), (app = express());
 
-app.set("view engine", "ejs");
+// no necessary to set view engine to html, and not using ejs for now
+// app.set("view engine", "ejs");
 
-app.use(
-    bodyparser.urlencoded({
-        extended: true
-    })
-);
+// this allows data to be sucked out from a form when combined with req.body  
+// app.use(
+//     bodyparser.urlencoded({
+//         extended: true
+//     })
+// );
+
 //this is a way of using, requiring and running at the same time.
 //It needs 3 options, the secret can be literally anything, it is used to code and decode web sessions
 // app.use(
@@ -37,10 +40,6 @@ mongCon.on("disconnected", function () {
     console.log("you're off the database now");
 });
 
-// mongCon.on('error', function () {
-//     console.log(error, 'ohhh shit we got incoming, \n there\'s an error!!');
-// });
-
 app.get("/", function (req, res) {
     res.sendFile(path.join(__dirname + "/HTML/lignumIndex.html"));
 });
@@ -60,48 +59,3 @@ app.listen(port, function () {
     console.log(__dirname + "/HTML/lignumIndex.html");
 });
 
-// var http = require("http");
-// var servz = http.createServer(function (req, res) {
-//     res.writeHead(200, {
-//         "Content-Type": "text/plain"
-//     });
-//     res.end("Sup bitches?");
-// });
-
-// var customerSchema = new mongoose.Schema({
-//     name: {
-//         firstName: String,
-//         middleName: String,
-//         lastName: String
-//     },
-//     mobile: String,
-//     email: String,
-//     order: {
-//         itemsOrdered: String,
-//         visit: Number,
-//         total: Number,
-//         time: Number,
-//         date: Date
-//     }
-// });
-
-// var Customer = mongoose.model("Customer", customerSchema);
-// this makes a model based on the customer schema with methods on it so that you can do Customer.find etc
-
-// Customer.create({
-//     name: {
-//         firstName: 'Marcia',
-//         lastName: 'Henriques',
-//     },
-//     mobile: '07947733333',
-//     email: 'cheerios@cheeryGood.com'
-// }, function (err, personFile) {
-//     if (err) {
-//         console.log(err);
-//     } else {
-//         console.log(personFile);
-//         console.log('newly created file for a customer');
-//     }
-// });
-
-// servz.listen(3001, "127.0.0.1");
