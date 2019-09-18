@@ -1,6 +1,6 @@
 const port = process.env.port || 3000,
-    bodyparser = require("body-parser"),
-    mongoose = require("mongoose"),
+    // bodyparser = require("body-parser"),
+    // mongoose = require("mongoose"),
     path = require("path");
 
 (express = require("express")), (app = express());
@@ -28,17 +28,17 @@ const port = process.env.port || 3000,
 
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost/lignumv", {
-    useNewUrlParser: true
-});
-const mongCon = mongoose.connection;
-mongCon.on("connected", function () {
-    console.log("beep boop \ndatabase mainframe syncroniiiiiiized");
-});
+// mongoose.connect("mongodb://localhost/lignumv", {
+//     useNewUrlParser: true
+// });
+// const mongCon = mongoose.connection;
+// mongCon.on("connected", function () {
+//     console.log("beep boop \ndatabase mainframe syncroniiiiiiized");
+// });
 
-mongCon.on("disconnected", function () {
-    console.log("you're off the database now");
-});
+// mongCon.on("disconnected", function () {
+//     console.log("you're off the database now");
+// });
 
 app.get("/", function (req, res) {
     res.sendFile(path.join(__dirname + "/HTML/lignumIndex.html"));
