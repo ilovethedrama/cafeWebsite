@@ -547,6 +547,7 @@ a[name="orderFoodPart"] div {
     /* justify-items: space-between; */
     text-align: center;
     width: 100%;
+    max-width: 100%;
     background-color: blanchedalmond;
     display: flex;
   }
