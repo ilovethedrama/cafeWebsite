@@ -12,6 +12,7 @@
   <title>Lignum V. Caribbean Cafe</title>
   <meta name="description" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css?family=McLaren&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
   <link rel="stylesheet" href="../CSS/lignumStyleSheet.css" />
@@ -25,11 +26,44 @@
   <div id="foodmenu" aria-haspopup="true" class="foodmenu">
     <div class="foodmenuContainer">
       <h1 class="foodmenu__item"><a href="#">Starters</a></h1>
+      <ul id='starterSection' class='foodmenu__item--section hideIt'>
+        <li class='foodmenu__item--choice'>Kale and Mango Salad - £3.99</li>
+        <li class='foodmenu__item--choice'>Split Pea Soup - £3.99</li>
+        <li class='foodmenu__item--choice'>Roast Shrimp Sticks - £3.99</li>
+        <li class='foodmenu__item--choice'>Sweet BBQ Calamari - £3.99</li>
+        <li class='foodmenu__item--choice'>Mini Patty Selection - £3.99</li>
+      </ul>
       <h1 class="foodmenu__item"><a href="#">Mains </a></h1>
+      <ul id='mainSection' class='foodmenu__item--section hideIt'>
+        <li class='foodmenu__item--choice'>Ackee and Salt fish (seasonal) - £3.99</li>
+        <li class='foodmenu__item--choice'>Fried Liver - £3.99</li>
+        <li class='foodmenu__item--choice'>Stew Chicken - £3.99</li>
+        <li class='foodmenu__item--choice'>Fried Chicken and Hard Food - £3.99</li>
+        <li class='foodmenu__item--choice'>Saturday Soup - £3.99</li>
+        <li class='foodmenu__item--choice'>Okra & Saltfish - £3.99</li>
+      </ul>
       <h1 class="foodmenu__item"><a href="#">Desserts</a></h1>
+      <ul id='dessertSection' class='foodmenu__item--section hideIt'>
+        <li class='foodmenu__item--choice'>Homemade Cake of the Day - £3.99</li>
+        <li class='foodmenu__item--choice'>Coconut Pudding - £3.99</li>
+        <li class='foodmenu__item--choice'>Spanish Town Mess - £3.99</li>
+        <li class='foodmenu__item--choice'>Chocolate Fondant Slice - £3.99</li>
+        <li class='foodmenu__item--choice'>Carrot Layer Cake - £3.99</li>
+      </ul>
       <h1 class="foodmenu__item"><a href="#">Sides</a></h1>
+      <ul id='sidesSection' class='foodmenu__item--section hideIt'>
+        <li class='foodmenu__item--choice'>Festival - £3.99</li>
+        <li class='foodmenu__item--choice'>Aoli and Sweet Potato Fries - £3.99</li>
+        <li class='foodmenu__item--choice'>Dumpling - £3.99</li>
+        <li class='foodmenu__item--choice'>Plantain - £3.99</li>
+      </ul>
       <h1 class="foodmenu__item"><a href="#">Drinks</a></h1>
-
+      <ul id='drinkSection' class='foodmenu__item--section hideIt'>
+        <li class='foodmenu__item--choice'>Supermalt - £3.99</li>
+        <li class='foodmenu__item--choice'>Dragon Stout - £3.99</li>
+        <li class='foodmenu__item--choice'>Guiness Punch - £3.99</li>
+        <li class='foodmenu__item--choice'>Pineapple Punch - £3.99</li>
+      </ul>
       <p id="foodmenu-btn-close" class="foodmenu__btn--close">
         <a href="javascript:void(0)" onclick="closeNav()">&times;</a>
       </p>
@@ -38,7 +72,7 @@
 
   <header class="">
     <div class="restaurant__title">
-      <h1 class="restaurant__title--name">Lignum <span>V.</span></h1>
+      <h1 class="restaurant__title--name">Lignum V.</h1>
       <h3 class="restaurant__title--desc">Contemporary Caribbean Cafe</h3>
       <h5 class="restaurant__title--addy">75 Middlewood Road, Sheffield</h5>
     </div>
@@ -74,9 +108,7 @@
       </li>
     </div>
 
-    <div class="restaurant-navigation__img-container">
-      <img class="restaurant-navigation__img--mini" src="../Media/coconut.jpg" alt="" />
-    </div>
+
     <div class="social-media-menu" id="social-media-menu">
       <i class="social-media-menu__icon fab fa-twitter" title='Jump into the conversation '></i>
       <i class="social-media-menu__icon fab fa-instagram" title='Vibe out to our curated playlist'></i>
@@ -91,16 +123,12 @@
   </header>
 
   <main id="main">
-    <!-- <p id="foodmenu-btn-close" class="foodmenu__btn--close">
-      <a href="javascript:void(0)" onclick="closeNav()">&times;</a>
-    </p> -->
+
 
     <section class="restaurant-info">
       <div class="restaurant-info-content-container">
-        <!-- <div class="text-container">
-        <div class="restaurant-info__text">boooo</div>
-        </div> -->
-        <video autoplay="autoplay" loop muted poster="../Media/pineapple.jpg" class="restaurant-navigation__vid--large"
+ 
+        <video autoplay="autoplay" loop muted class="restaurant-navigation__vid--large"
           alt="image of Lignum V. dumplings and fried chicken on a plate of fresh pineapple salad">
           <source src="../Media/fruitybowl.mp4" type="video/mp4" />
         </video>
@@ -163,7 +191,10 @@
       <div class="restaurant-info-content-container">
         <div class="text-container">
           <div class="restaurant-info__text">
-            <p>boooo</p>
+            <p>We are a family owned business, proud to be independent,
+              proud also in our support of local suppliers in the pursuit
+              of locally sourced and produced ingredients for our kitchen.
+            </p>
           </div>
         </div>
         <img class="restaurant-info__img" src="../Media/owner.jpg"

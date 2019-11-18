@@ -8,7 +8,6 @@
   font-weight: bold;
 }
 
-
 a {
   text-decoration: none;
   color: black;
@@ -40,19 +39,19 @@ body {
   overflow-x: hidden;
 }
 
-/* @media screen and (min-width: 600px) { */
 .restaurant__title {
   padding: 20px;
   width: 100%;
-
-  /* max-width:440px; */
 }
 
 .restaurant__title--name {
-  font-size: 6.5rem;
+  font-size: calc(5rem + (5 - 1) * ((100vw - 300px) / (1600 - 300)));
+  /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
+  /* font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300))); */
+  /* font-size: 6.5rem;
   margin-left: -3px;
   line-height: 5rem;
-  padding: 0px;
+  padding: 0px; */
 }
 
 .restaurant__title--desc {
@@ -64,9 +63,6 @@ body {
   margin: 0;
   font-size: 1.2rem;
   font-family: norwester;
-
-  /* font-size: 1vw; */
-  /* letter-spacing: .25rem; */
 }
 
 .restaurant__title span {
@@ -75,8 +71,6 @@ body {
   line-height: 3rem;
 }
 
-
-
 .social-media-menu {
   display: flex;
   flex-flow: row wrap;
@@ -84,7 +78,11 @@ body {
   width: 200px;
   font-size: 1.1rem;
   padding: 20px;
-  /* display: none; */
+}
+
+.foodChoicePicked {
+  display: block;
+  color: blanchedalmond;
 }
 
 .social-media-menu__icon {
@@ -99,6 +97,10 @@ body {
 }
 
 .sidenav__button--close {
+  display: none;
+}
+
+.hideIt {
   display: none;
 }
 
@@ -135,8 +137,7 @@ body {
 }
 
 .restaurant-navigation__link a {
-  /* font-size: 2.3rem; */
-  font-size: calc(2rem + (7 - 2) * ((100vw - 1000px) / (1600 - 1000)));
+  font-size: calc(1.75rem + (8 - 2) * ((100vw - 1000px) / (1600 - 1000)));
   /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
   /* font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300))); */
 }
@@ -185,7 +186,12 @@ body {
   color: blanchedalmond;
   transition: ease font 0.5s;
   background-color: black;
+}
 
+.restaurant-navigation__vid--large {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 strong {
@@ -206,10 +212,9 @@ header {
   transition: 0.5s;
   text-align: left;
   overflow: none;
-  min-width: 30%;
+  min-width: 120px;
   height: 100%;
 }
-
 
 footer {
   display: flex;
@@ -219,7 +224,7 @@ footer {
   padding: 0px 100px;
 }
 
-footer>div {
+footer > div {
   font-size: 2rem;
   width: 100%;
 }
@@ -248,8 +253,28 @@ footer>div {
 }
 
 .foodmenu__btn--close a:hover {
-  color: rgba(231, 164, 64);
+  color: blanchedalmond;
   transition: 0.3s ease;
+}
+
+:not(.foodmenu__item:hover) {
+  color: lightgrey;
+}
+
+.foodmenu__item--choice {
+  padding: 5px 0px;
+  line-height: 2.5rem;
+  font-size: 1.5rem;
+}
+
+.foodmenu__item--choice:active,
+.foodmenu__item--choice:hover {
+  color: blanchedalmond;
+  transition: 0.3s ease;
+}
+
+.foodmenu__item--section {
+  width: 100%;
 }
 
 .foodmenu__btn--close {
@@ -267,7 +292,7 @@ footer>div {
   font-weight: 900;
   color: black;
   text-decoration: none;
-  transition: font-size ease .5s;
+  transition: font-size ease 0.5s;
 }
 
 .foodmenu {
@@ -285,6 +310,7 @@ footer>div {
   font: 2.5rem norwester;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .foodmenuContainer {
@@ -294,18 +320,29 @@ footer>div {
   justify-content: center;
   align-content: center;
   z-index: 3;
+  align-items: flex-start;
+}
+
+.foodmenu__item:hover {
+  color: green;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
 }
 
 .foodmenu__item {
   color: black;
   text-decoration: none;
-  padding: 20px;
+  margin-top: 30px;
+  width: 100%;
 }
 
 .foodmenu__item a {
   font: 5rem norwester;
   text-transform: uppercase;
-  transition: all ease .5s;
+  transition: all ease 0.5s;
 }
 
 .foodmenu__item a:hover,
@@ -317,15 +354,14 @@ footer>div {
 }
 
 .restaurant-navigation__link--shadow {
-  font: calc(1.5rem + (4 - 1.5) * ((100vw - 1000px) / (1600 - 1000))) theDownload;
-  /* font-size: calc(.5rem + (1.5 - .5) * ((100vw - 1000px) / (1600 - 1000))); */
-
+  font: calc(1.5rem + (4 - 1.5) * ((100vw - 1000px) / (1600 - 1000)))
+    theDownload;
   font-weight: 900;
   text-transform: uppercase;
   opacity: 0.4;
 }
 
-.openDay:hover+.openHours {
+.openDay:hover + .openHours {
   color: blanchedalmond;
   transition: 0.5s;
 }
@@ -363,12 +399,8 @@ a[name="orderFoodPart"] div {
   }
 
   .restaurant-info__img {
-    /* width: calc(100vw - 30vw); */
-    /* margin-left: 30vw; */
     height: 100vh;
-    /* height: 100%; */
     object-fit: cover;
-    /* transition: all .5s ease; */
   }
 
   .social-media-menu__icon {
@@ -376,30 +408,17 @@ a[name="orderFoodPart"] div {
   }
 
   .restaurant-info-content-container .restaurant-info__text {
-    /* position: absolute;
-    padding:10px;
-    
-    text-align: center; */
-    /* height: auto;
-    width: auto; */
-    /* margin-left: 20%; */
-    /* font: 4rem norwester; */
-
     border: 20px solid aquamarine;
     background-color: aquamarine;
     position: relative;
-    /* right: 10%; */
     line-height: 0px;
   }
 
   .restaurant-info__text p {
-    /* font: 3.5rem norwester; */
-    /* border: 2px solid palevioletred; */
     color: black;
     background-color: aquamarine;
     display: block;
     font-size: calc(3rem + (9 - 3) * ((100vw - 600px) / (1100 - 600)));
-    /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
   }
 
   .restaurant-info__text--superscript {
@@ -410,24 +429,23 @@ a[name="orderFoodPart"] div {
   .text-container {
     position: absolute;
     right: 30%;
-    /* max-width:300px; */
   }
 
   strong {
     color: black;
   }
 
-  .foodmenu__btn--close {
+  /* .foodmenu__btn--close {
     position: absolute;
-    bottom: 10%;
-  }
-
+    left: 10%;
+  } */
+  /* 
   .foodmenu__btn--close a {
     width: auto;
     height: auto;
     font-size: 5rem;
     line-height: 1rem;
-  }
+  } */
 
   .foodmenu__btn--close a:hover {
     color: blanchedalmond;
@@ -444,10 +462,10 @@ a[name="orderFoodPart"] div {
   }
 
   .restaurant__title--name {
-    font-size: 5rem;
+    /* font-size: 5rem;
     margin-left: -3px;
     line-height: 5rem;
-    padding: 0px;
+    padding: 0px; */
   }
 }
 
@@ -464,16 +482,10 @@ a[name="orderFoodPart"] div {
 @media screen and (max-width: 900px) {
   .restaurant-info__text p {
     font: 2.5rem norwester;
-    /* border: 10px solid rgb(156, 160, 158) */
-    /* border: 2px solid palevioletred; */
-    /* display: block; */
-    /* font-size: calc(3rem + (9 - 3) * ((100vw - 600px) / (1100 - 600))); */
-    /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
   }
 
   .restaurant-info__text {
     margin-left: 10%;
-    /* width */
   }
 }
 
@@ -490,25 +502,15 @@ a[name="orderFoodPart"] div {
 @media screen and (max-width: 760px) {
   .restaurant-info__text p {
     font: 2.5rem norwester;
-    /* border: 10px solid rgb(156, 160, 158) */
-    /* border: 2px solid palevioletred; */
-    /* display: block; */
-    /* font-size: calc(3rem + (9 - 3) * ((100vw - 600px) / (1100 - 600))); */
-    /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
   }
 
   .restaurant-info__text {
     margin-left: 20%;
-    /* width */
   }
 
   .restaurant__title--name {
-    font-size: 4rem;
+    /* font-size: 4rem; */
   }
-
-  /* .social-media-menu, .restaurant-navigation, .restaurant__title {
-    text-align: right;
-  } */
 
   .foodmenu__item a {
     font-size: 3.5rem;
@@ -526,6 +528,81 @@ a[name="orderFoodPart"] div {
  */
 
 @media screen and (max-width: 600px) {
+  .restaurant-navigation__link--shadow {
+    display: none;
+  }
+  .restaurant-navigation__link {
+    text-align: center;
+  }
+
+  .restaurant-navigation {
+    padding: 0px;
+  }
+  .restaurant-navigation__link a {
+    font-size: 1.3rem;
+    font-weight: normal;
+  }
+
+  .restaurant__title {
+    padding: 0;
+    text-align: center;
+  }
+
+  .restaurant__title--name {
+    font-size: 2.5rem;
+  }
+
+  .restaurant__title--addy {
+    display: none;
+  }
+
+  .text-container {
+    width: 70%;
+    left: 30%;
+    padding: 0;
+  }
+
+  .restaurant-info__text {
+    margin: 0%;
+  }
+
+  .restaurant-info__text p {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+
+  .foodmenu__item a {
+    font-size: 2.5rem;
+  }
+
+  .foodmenu__item--choice {
+    font-size: 1.25rem;
+  }
+
+  .foodmenu__btn--close a {
+    font-size: 4rem;
+  }
+
+  .social-media-menu {
+    width: auto;
+    flex-flow: column wrap;
+    padding: 0px 20px 20px 20px;
+    align-content: center;
+  }
+
+  .social-media-menu__icon {
+    padding: 10px 0;
+    font-size: 1.4rem;
+  }
+
+  .foodmenu__btn--close {
+    bottom: 10%;
+    right: 50px;
+  }
+
+  /*
+
+    
   header {
     overflow: hidden;
     position: fixed;
@@ -541,10 +618,8 @@ a[name="orderFoodPart"] div {
     -webkit-box-direction: normal;
     -ms-flex-flow: column nowrap;
     flex-flow: column nowrap;
-    /* align-items: center; */
     -ms-flex-pack: distribute;
     justify-content: space-around;
-    /* justify-items: space-between; */
     text-align: center;
     width: 100%;
     max-width: 100%;
@@ -574,22 +649,15 @@ a[name="orderFoodPart"] div {
     background: blanchedalmond;
   }
 
-  .restaurant__title--name {
-    font-size: 4.5rem;
-    padding: 10px;
-    line-height: 2rem;
-  }
+
 
   .restaurant__title--desc {
     margin: 0;
     padding: 0px 0px 10px 0px;
-    /* font-size: 1.5rem; */
     text-transform: uppercase;
-    /* font-family: norwester; */
     letter-spacing: 0.2rem;
     border-bottom: 1.5px solid black;
     font-size: calc(1rem + (15 - 1) * ((100vw - 300px) / (600 - 100)));
-    /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
   }
 
   .restaurant__title--desc:before {
@@ -601,10 +669,6 @@ a[name="orderFoodPart"] div {
   }
 
   .restaurant__title--addy {
-    /* margin: 0;
-    padding: 5px;
-    font-size: 1.25rem;
-    font-family: norwester; */
     display: none;
   }
 
@@ -612,7 +676,6 @@ a[name="orderFoodPart"] div {
     margin-left: 0;
     height: 100vh;
     width: 100vw;
-    /* width: 100%; */
     -o-object-fit: cover;
     object-fit: cover;
   }
@@ -649,22 +712,13 @@ a[name="orderFoodPart"] div {
   .restaurant-info__text {
     position: absolute;
     padding: 5%;
-    /* font: 30rem norwester; */
     color: #000;
     width: 100%;
     opacity: 1;
     z-index: 1;
-    /* background-color: rgba(255, 255, 255, 0.5); */
     margin-left: 0;
   }
 
-  .restaurant-info:first-of-type::before {
-    position: absolute;
-    top: 50%;
-    content: 'chewing gum';
-    font-size: 100px;
-    color: pink;
-  }
 
   .restaurant-navigation__link {
     padding: 15px 0px;
@@ -780,13 +834,10 @@ a[name="orderFoodPart"] div {
   .foodmenu {
     height: 100%;
     width: 0%;
-    background-color: orange;
-    /* background-color: blanchedalmond; */
     overflow: hidden;
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
-    /* font: 2rem norwester; */
     font-family: norwester;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -803,10 +854,6 @@ a[name="orderFoodPart"] div {
     -ms-flex-pack: center;
     justify-content: center;
     text-align: center;
-    /*no padding for larger screen sizes */
-    /* padding-top:45%; */
-    /* border: 10px solid black; */
-    /* align-self: flex-end; */
   }
 
 
@@ -851,25 +898,13 @@ a[name="orderFoodPart"] div {
 
   .foodmenu__btn--close a {
     color: black;
-    /* opacity: 0.8; */
     font-size: 5rem;
     -webkit-transition: 0.3s ease;
     -o-transition: 0.3s ease;
     transition: 0.3s ease;
   }
 
-  .foodmenu__btn--close {
-    position: absolute;
-    top: 90%;
-    bottom: 0;
-    right: 0;
-    left: 45%;
-    margin: auto 0;
-    height: 30px;
-    width: 30px;
-    z-index: 1;
-    opacity: 0;
-  }
+
 
   .heightPush {
     height: auto;
@@ -894,16 +929,12 @@ a[name="orderFoodPart"] div {
     justify-content: center;
     height: auto;
     left: 0;
-    /* border: 2px solid orange; */
   }
 
-  /* .restaurant-info-content-container .restaurant-info__text { */
-  /* border: 10px solid saddlebrown; */
-  /* width:50px; */
-  /* } */
 
   .restaurant-info__text p {
     font-size: 2rem;
     display: inline;
   }
+  */
 }
