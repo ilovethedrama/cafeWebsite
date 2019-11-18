@@ -590,342 +590,36 @@ a[name="orderFoodPart"] div {
     bottom: 10%;
     right: 50px;
   }
+}
 
-  /*
-
-    
-  header {
-    overflow: hidden;
-    position: fixed;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    height: 100vh;
-    top: 0;
-    z-index: 2;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-flow: column nowrap;
-    flex-flow: column nowrap;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    text-align: center;
-    width: 100%;
-    max-width: 100%;
-    background-color: blanchedalmond;
-    display: flex;
+@media screen and (max-width: 449px) {
+  .social-media-menu__icon {
+    padding: 8px 0;
+    font-size: 0.9rem;
   }
 
-  .restaurant-navigation__img-container {
-    width: 100%;
-    height: 150px;
-    position: relative;
-    overflow: hidden;
+  .social-media-menu__icon {
+    font-size: 1rem;
   }
-
-  .restaurant-navigation__img--mini {
-    top: 0;
-    left: 0;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-  }
-
-  .restaurant__title {
-    padding: 10px;
-    background: blanchedalmond;
-  }
-
-
-
-  .restaurant__title--desc {
-    margin: 0;
-    padding: 0px 0px 10px 0px;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    border-bottom: 1.5px solid black;
-    font-size: calc(1rem + (15 - 1) * ((100vw - 300px) / (600 - 100)));
-  }
-
-  .restaurant__title--desc:before {
-    content: "- Sheffield's ";
-  }
-
-  .restaurant__title--desc:after {
-    content: " -";
-  }
-
-  .restaurant__title--addy {
-    display: none;
-  }
-
-  .restaurant-info__img {
-    margin-left: 0;
-    height: 100vh;
-    width: 100vw;
-    -o-object-fit: cover;
-    object-fit: cover;
-  }
-
-  .restaurant-navigation__link--shadow {
-    display: none;
-  }
-
-  .restaurant-navigation__vid--mini {
-    top: 0;
-    left: 0;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-  }
-
-  .restaurant-info-content-container {
-    overflow: hidden;
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    overflow: none;
-  }
-
-  .restaurant-info__text {
-    position: absolute;
-    padding: 5%;
-    color: #000;
-    width: 100%;
-    opacity: 1;
-    z-index: 1;
-    margin-left: 0;
-  }
-
-
-  .restaurant-navigation__link {
-    padding: 15px 0px;
-    list-style-type: none;
-    width: 100%;
-  }
-
-  .restaurant-navigation a {
-    font: 1.5rem norwester;
-    color: black;
-    transition: font ease 0.5s;
-  }
-
-  .restaurant-navigation {
-    text-align: center;
-  }
-
-  .restaurant-navigation p:hover,
-  .restaurant-navigation p:active,
-  .restaurant-navigation__link a:hover,
-  .restaurant-navigation__link a:active,
-  .sidenav__button--close:hover,
-  .sidenav__button--close:active {
-    color: rgba(231, 164, 64);
-    -webkit-transition: 0.3s ease;
-    -o-transition: 0.3s ease;
-    transition: 0.3s ease;
-  }
-
-  .restaurant-navigation p:hover:after,
-  .restaurant-navigation p:active:after .restaurant-navigation__link:hover:after,
-  .restaurant-navigation__link:active:after {
-    color: rgba(231, 164, 64);
-    margin-left: 5px;
-  }
-
-  .restaurant-navigation__vid--large {
-    display: none;
-  }
-
-  .social-media-menu {
-    padding: 10px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-flow: row wrap;
-    flex-flow: row wrap;
-    background: blanchedalmond;
-    -webkit-box-pack: space-evenly;
-    -ms-flex-pack: space-evenly;
-    justify-content: space-evenly;
-    width: 100%;
-    font-size: 1.1rem;
-  }
-
-  .social-media-menu__icon:hover,
-  .social-media-menu__icon:active {
-    color: rgba(231, 164, 64);
-    transition: color ease 0.4s;
-  }
-
-  footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    background: hsl(36, 37%, 75%);
-    text-align: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
-
-  footer>div {
-    font-size: 2rem;
-    width: 100%;
-  }
-
-  .sitemap-section {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    padding: 30px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-flow: row wrap;
-    flex-flow: row wrap;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    list-style-type: none;
-  }
-
-  .generalInfo {
-    font-size: 2rem;
-  }
-
-  .sitemap-section__link {
-    color: black;
-    padding: 10px 20px;
-    font: 1rem norwester;
-  }
-
-  .contactUs {
-    width: 100%;
-  }
-
-  .openingTimes {
-    display: none;
-  }
-
-  .foodmenu {
-    height: 100%;
-    width: 0%;
-    overflow: hidden;
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s;
-    font-family: norwester;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    z-index: 2;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-flow: column wrap;
-    flex-flow: column wrap;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    text-align: center;
-  }
-
-
-  .foodmenu__item {
-    color: black;
-    width: auto;
-    padding: 15px 10px;
-  }
-
-  .foodmenu__item a {
-    font: 2rem norwester;
-  }
-
-  .foodmenu:hover>.foodmenu__item a {
-    color: hsl(0, 17%, 25%);
-    opacity: 0.7;
-    -webkit-transition: all ease 0.8s;
-    -o-transition: all ease 0.8s;
-    transition: all ease 0.8s;
-  }
-
-  .foodmenu:hover>.foodmenu__item a:hover {
-    color: green;
-    opacity: 1;
-  }
-
-  .foodmenu__item:hover,
-  .foodmenu__item:active {
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s;
-    color: rgba(231, 164, 64);
-  }
-
-  .foodmenu__btn--close a:hover,
-  .foodmenu__btn--close a:active {
-    color: blanchedalmond;
-    -webkit-transition: all ease 0.5s;
-    -o-transition: all ease 0.5s;
-    transition: all ease 0.5s;
-  }
-
-  .foodmenu__btn--close a {
-    color: black;
-    font-size: 5rem;
-    -webkit-transition: 0.3s ease;
-    -o-transition: 0.3s ease;
-    transition: 0.3s ease;
-  }
-
-
-
-  .heightPush {
-    height: auto;
-  }
-
-  .sidenav__button--close {
-    display: block;
-    cursor: pointer;
-    padding: 10px;
-    background: blanchedalmond;
-    box-flex: 1;
-  }
-
-
-  .shutter {
-    display: none;
-  }
-
-  .text-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    height: auto;
-    left: 0;
-  }
-
 
   .restaurant-info__text p {
-    font-size: 2rem;
-    display: inline;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
-  */
+
+  .restaurant-navigation__link {
+    padding: 8px 0px;
+  }
+
+  .restaurant-navigation__link a {
+    font-size: 1rem;
+  }
+  .restaurant__title--desc {
+    font-size: 1.3rem;
+  }
+
+  .restaurant__title--name {
+    font-size: 2.3rem;
+    padding: 10px 0;
+  }
 }
