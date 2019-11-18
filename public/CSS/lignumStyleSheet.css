@@ -550,6 +550,7 @@ a[name="orderFoodPart"] div {
 
   .restaurant__title--name {
     font-size: 2.5rem;
+    padding-top: 20px;
   }
 
   .restaurant__title--addy {
