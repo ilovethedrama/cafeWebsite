@@ -1,15 +1,18 @@
 const restNavLinks = document.querySelectorAll(
     ".restaurant-navigation__link a"
   ),
-  sidenavBtnClose = document.querySelector(".sidenav__button--close"),
+  foodchoice = document.getElementsByClassName('foodmenu__item--section');
+sidenavBtnClose = document.querySelector(".sidenav__button--close"),
   titleAddy = document.querySelector(".restaurant__title--addy"),
   foodMenuClose = document.getElementById("foodmenu-btn-close"),
   mealMenu = document.getElementById("restaurant-navigation"),
+  foodMenuItem = document.querySelectorAll('.foodmenu__item'),
   titleGroup = document.querySelector(".restaurant__title"),
   socials = document.getElementById("social-media-menu"),
   foodMenu = document.getElementById("foodmenu"),
   header = document.querySelector("header"),
   menuOption = restNavLinks[0];
+
 
 function lockArff() {
   mealMenu.classList.toggle("shutter");
@@ -30,26 +33,39 @@ function closeNav() {
 }
 
 for (var i = 0; i < restNavLinks.length; i++) {
-  restNavLinks[i].onclick = function() {
+  restNavLinks[i].onclick = function () {
     lockArff();
-    console.log("pie");
   };
 }
 
-sidenavBtnClose.onclick = function() {
+sidenavBtnClose.onclick = function () {
   lockArff();
-  console.log("cherry");
 };
 
-menuOption.onclick = function() {
+menuOption.onclick = function () {
   openNav();
 };
 
-// function windowScaleDownMsg() {
-//   let currentSize =
-//     window.innerWidth < 600
-//       ? console.log("the foodmenu should be 100% and a block element")
-//       : console.log("the foodmenu should be 65% and a flex element");
-// }
+foodMenuClose.onclick = () => {
+  foodMenu.style.alignItems = "center";
+  foodMenu.style.WebkitAlignItems = "center";
+}
 
-// window.addEventListener("resize", windowScaleDownMsg);
+
+const starters = document.getElementById('starterSection')
+
+
+
+
+
+
+
+
+for (i = 0; i < foodMenuItem.length; i++) {
+  foodMenuItem[i].addEventListener("click", function () {
+    this.nextElementSibling.classList.toggle('hideIt')
+    console.log('boop!', this.nextElementSibling);
+    foodMenu.style.alignItems = "flex-start";
+    foodMenu.style.WebkitAlignItems = "flex-start";
+  });
+}
