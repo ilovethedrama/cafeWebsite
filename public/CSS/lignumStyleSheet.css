@@ -563,21 +563,21 @@ a[name="orderFoodPart"] div {
   }
 
   .foodmenu__item a {
-    font-size: 2.5rem;
+    font-size: 1.75rem;
   }
 
   .foodmenu__item--choice {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 
   .foodmenu__btn--close a {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   .social-media-menu {
     width: auto;
     flex-flow: column wrap;
-    padding: 0px 20px 20px 20px;
+    padding: 0px 20px;
     align-content: center;
   }
 
@@ -587,8 +587,8 @@ a[name="orderFoodPart"] div {
   }
 
   .foodmenu__btn--close {
-    bottom: 10%;
-    right: 50px;
+    bottom: 13%;
+    right: 7%;
   }
 }
 
