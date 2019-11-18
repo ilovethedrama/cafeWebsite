@@ -460,13 +460,6 @@ a[name="orderFoodPart"] div {
   .restaurant__title--addy {
     font-size: 1rem;
   }
-
-  .restaurant__title--name {
-    /* font-size: 5rem;
-    margin-left: -3px;
-    line-height: 5rem;
-    padding: 0px; */
-  }
 }
 
 /* 
@@ -506,10 +499,6 @@ a[name="orderFoodPart"] div {
 
   .restaurant-info__text {
     margin-left: 20%;
-  }
-
-  .restaurant__title--name {
-    /* font-size: 4rem; */
   }
 
   .foodmenu__item a {
