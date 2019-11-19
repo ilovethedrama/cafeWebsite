@@ -72,9 +72,9 @@
 
   <header class="">
     <div class="restaurant__title">
-      <h1 class="restaurant__title--name">Lignum V.</h1>
+      <h1 class="restaurant__title--name">Lenny T's</h1>
       <h3 class="restaurant__title--desc">Contemporary Caribbean Cafe</h3>
-      <h5 class="restaurant__title--addy">75 Middlewood Road, Sheffield</h5>
+      <h5 class="restaurant__title--addy">Sheffield</h5>
     </div>
 
     <div class="restaurant-navigation" aria-haspopup="true" id="restaurant-navigation">
@@ -127,7 +127,7 @@
 
     <section class="restaurant-info">
       <div class="restaurant-info-content-container">
- 
+
         <video autoplay="autoplay" loop muted class="restaurant-navigation__vid--large"
           alt="image of Lignum V. dumplings and fried chicken on a plate of fresh pineapple salad">
           <source src="../Media/fruitybowl.mp4" type="video/mp4" />
@@ -238,7 +238,19 @@
       </div> -->
     </footer>
   </main>
-  <script src="../JS/lignumJS.js" async defer></script>
+  <script src="../JS/lignumJS.js" async defer>
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').then(function (registration) {
+        // Registration was successful
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      }).catch(function (err) {
+        // registration failed :(
+        console.log('ServiceWorker registration failed: ', err);
+      });
+    }
+  </script>
 </body>
 
 </html>
