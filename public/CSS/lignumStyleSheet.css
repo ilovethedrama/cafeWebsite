@@ -88,9 +88,8 @@ font-size:3rem;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  width: 200px;
   font-size: 1.1rem;
-  padding: 20px;
+  padding: 20px 0px;
 }
 
 .foodChoicePicked {
@@ -293,6 +292,9 @@ footer > div {
 
 .foodmenu__item--section {
   width: 100%;
+  margin: 2rem 0;
+  padding-top: 1rem;
+  border-top: 2px solid black;
 }
 
 .foodmenu__btn--close {
@@ -382,9 +384,9 @@ footer > div {
 }
 
 .foodmenu__item a {
-  font: 5rem norwester;
-  text-transform: uppercase;
+  font: 5rem miniver;
   transition: all ease 0.5s;
+  /* text-decoration: underline; */
 }
 
 .foodmenu__item a:hover,
@@ -627,7 +629,7 @@ a[name="orderFoodPart"] div {
   }
 
   .foodmenu__item a {
-    font-size: 1.75rem;
+    font-size: 2.75rem;
   }
 
   .foodmenu__item--choice {
