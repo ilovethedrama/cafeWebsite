@@ -109,6 +109,27 @@ font-size:3rem;
   color: rgba(231, 164, 64);
 }
 
+.newoffer__text--content {
+  text-align:center;
+}
+
+.newoffer__text--title {
+  font-size: 8rem;
+  font-family: miniver;
+  color: blanchedalmond;
+  transition: ease font 0.5s;
+  background-color: black;
+  line-height: 67px;
+  z-index: 3;
+  position: relative;
+  padding-bottom: 2.5rem;
+}
+
+.newoffer__text--price {
+  font-size: 2rem;
+  font-family: miniver;
+}
+
 .sidenav__button--close {
   display: none;
 }
@@ -196,6 +217,9 @@ font-size:3rem;
   height: auto;
   width: auto;
   transition: ease font 0.5s;
+  top: 50%;
+  position: relative;
+  transform: translateY(-50%);
 }
 
 .restaurant-info__text p {
@@ -443,6 +467,10 @@ a[name="orderFoodPart"] div {
     max-width: 30%;
   }
 
+  .newoffer__text--title {
+    font-size: 5rem;
+  }
+
   .restaurant-info__img {
     height: 100vh;
     object-fit: cover;
@@ -604,13 +632,16 @@ a[name="orderFoodPart"] div {
     display: none;
   }
 
+  .newoffer__text--title {
+    font-size: 3rem;
+    padding:0;
+  }
+
   .text-container {
     width: 70%;
     left: 30%;
     right: 0;
     min-width: 200px;
-    transform: translateY(-35%);
-    top: 50%;
   }
 
   .restaurant-info__text {
@@ -693,12 +724,12 @@ a[name="orderFoodPart"] div {
     left: 33%;
   }
 
-  /* .text-container {
+  .text-container {
     padding: 0%;
     width: calc(100% - 120px);
     right:0;
     left: 120px;
 
 
-  } */
+  }
 }
