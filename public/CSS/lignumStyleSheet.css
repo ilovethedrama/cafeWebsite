@@ -32,6 +32,7 @@ li {
   src: url(../Fonts/norwester.ttf) format("truetype");
 }
 
+
 body {
   font-family: theDownload;
   font-weight: 400;
@@ -45,7 +46,13 @@ body {
 }
 
 .restaurant__title--name {
-  font-size: calc(5rem + (5 - 1) * ((100vw - 300px) / (1600 - 300)));
+  font-family:'Miniver', cursive;
+  font-size: 4rem;
+  line-height:50px;
+
+  
+  /* font-size: calc(4rem + (4 - 1) * ((100vw - 300px) / (1600 - 300))); */
+  /* font-size: calc(5rem + (5 - 1) * ((100vw - 300px) / (1600 - 300))); */
   /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
   /* font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300))); */
   /* font-size: 6.5rem;
@@ -56,7 +63,13 @@ body {
 
 .restaurant__title--desc {
   margin: 0;
+  /* font-family:'Miniver', cursive; */
   font-size: 2rem;
+}
+
+.error__text--backButton {
+font-family: norwester;
+font-size:3rem;
 }
 
 .restaurant__title--addy {
@@ -98,6 +111,11 @@ body {
 
 .sidenav__button--close {
   display: none;
+}
+
+.restaurant-info__text--highlight {
+  /* color: rgba(231, 164, 64); */
+  color: blanchedalmond;
 }
 
 .hideIt {
@@ -167,7 +185,7 @@ body {
 }
 
 .text-container {
-  width: 70%;
+  width: 65%;
   position: absolute;
   left: 30%;
   padding: 5%;
@@ -182,7 +200,7 @@ body {
 
 .restaurant-info__text p {
   display: inline;
-  font: 4.2rem norwester;
+  font: 3.5rem norwester;
   color: blanchedalmond;
   transition: ease font 0.5s;
   background-color: black;
@@ -213,7 +231,7 @@ header {
   text-align: left;
   overflow: none;
   min-width: 120px;
-  height: 100%;
+  min-height: 100vh;
 }
 
 footer {
@@ -327,6 +345,30 @@ footer > div {
   color: green;
 }
 
+.error__text--container {
+  width: 50%;
+  position: absolute;
+  left: 30%;
+  top: 50%;
+  transform: translateX(20%);
+  text-align: center;
+  z-index: 1;
+}
+
+.error__text--content {
+  /* font-family: norwester; */
+  font-size: 4rem;
+  font-family:'Miniver', cursive;
+}
+
+.error__video--container {
+  height: 100%;
+  width: 70%;
+  right: 0;
+  position: absolute;
+  object-fit: cover;
+}
+
 ::-webkit-scrollbar {
   width: 0px;
   background: transparent;
@@ -403,6 +445,12 @@ a[name="orderFoodPart"] div {
     object-fit: cover;
   }
 
+
+  .restaurant__title--name {
+    font-size: 3rem;
+   
+   }
+
   .social-media-menu__icon {
     font-size: 1rem;
   }
@@ -418,7 +466,8 @@ a[name="orderFoodPart"] div {
     color: black;
     background-color: aquamarine;
     display: block;
-    font-size: calc(3rem + (9 - 3) * ((100vw - 600px) / (1100 - 600)));
+    font-size: 3rem;
+    /* font-size: calc(3rem + (9 - 3) * ((100vw - 600px) / (1100 - 600))); */
   }
 
   .restaurant-info__text--superscript {
@@ -477,9 +526,18 @@ a[name="orderFoodPart"] div {
     font: 2.5rem norwester;
   }
 
-  .restaurant-info__text {
+/* .restaurant-info__text {
     margin-left: 10%;
+  } */
+.error__text--backButton {
+    font-size:2rem;
   }
+.error__text--content {
+    font-size: 2.75rem;
+    background: pink;
+    padding: 2rem;
+ }
+   
 }
 
 /* 
@@ -496,14 +554,19 @@ a[name="orderFoodPart"] div {
   .restaurant-info__text p {
     font: 2.5rem norwester;
   }
-
-  .restaurant-info__text {
-    margin-left: 20%;
+  .restaurant-navigation__link--shadow {
+    display: none;
   }
+
+  /* .restaurant-info__text {
+    margin-left: 20%;
+  } */
 
   .foodmenu__item a {
     font-size: 3.5rem;
   }
+
+ 
 }
 
 /* 
@@ -517,9 +580,7 @@ a[name="orderFoodPart"] div {
  */
 
 @media screen and (max-width: 600px) {
-  .restaurant-navigation__link--shadow {
-    display: none;
-  }
+
   .restaurant-navigation__link {
     text-align: center;
   }
@@ -538,8 +599,9 @@ a[name="orderFoodPart"] div {
   }
 
   .restaurant__title--name {
-    font-size: 2.5rem;
+    font-size: 2rem;
     padding-top: 20px;
+    line-height: 50px;
   }
 
   .restaurant__title--addy {
@@ -551,6 +613,8 @@ a[name="orderFoodPart"] div {
     left: 30%;
     right: 0;
     min-width: 200px;
+    transform: translateY(-35%);
+    top: 50%;
   }
 
   .restaurant-info__text {
@@ -582,8 +646,8 @@ a[name="orderFoodPart"] div {
   }
 
   .social-media-menu__icon {
-    padding: 10px 0;
-    font-size: 1.4rem;
+    padding: 15px 0;
+    font-size: 1rem;
   }
 
   .foodmenu__btn--close {
@@ -591,6 +655,10 @@ a[name="orderFoodPart"] div {
     right: 7%;
   }
 }
+
+
+
+
 
 @media screen and (max-width: 449px) {
   .social-media-menu__icon {
@@ -603,7 +671,7 @@ a[name="orderFoodPart"] div {
   }
 
   .restaurant-info__text p {
-    font-size: 1.25rem;
+    font-size: 1rem;
     line-height: 1.5rem;
   }
 
@@ -619,7 +687,22 @@ a[name="orderFoodPart"] div {
   }
 
   .restaurant__title--name {
-    font-size: 2.3rem;
     padding: 10px 0;
   }
+  .error__text--content {
+  font-size: 1.75rem;
+  }
+
+  .error__text--container {
+    left: 33%;
+  }
+
+  /* .text-container {
+    padding: 0%;
+    width: calc(100% - 120px);
+    right:0;
+    left: 120px;
+
+
+  } */
 }
