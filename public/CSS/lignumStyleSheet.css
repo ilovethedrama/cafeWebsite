@@ -90,6 +90,7 @@ font-size:3rem;
   justify-content: space-between;
   font-size: 1.1rem;
   padding: 20px 0px;
+  width: 200px;
 }
 
 .foodChoicePicked {
@@ -457,6 +458,10 @@ a[name="orderFoodPart"] div {
     font-size: 1rem;
   }
 
+  .social-media-menu {
+    width: 100%;
+  }
+
   .restaurant-info-content-container .restaurant-info__text {
     border: 20px solid aquamarine;
     background-color: aquamarine;
@@ -486,17 +491,6 @@ a[name="orderFoodPart"] div {
     color: black;
   }
 
-  /* .foodmenu__btn--close {
-    position: absolute;
-    left: 10%;
-  } */
-  /* 
-  .foodmenu__btn--close a {
-    width: auto;
-    height: auto;
-    font-size: 5rem;
-    line-height: 1rem;
-  } */
 
   .foodmenu__btn--close a:hover {
     color: blanchedalmond;
