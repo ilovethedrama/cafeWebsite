@@ -1,8 +1,8 @@
 const restNavLinks = document.querySelectorAll(
-    ".restaurant-navigation__link a"
-  ),
+  ".restaurant-navigation__link a"
+),
   foodchoice = document.getElementsByClassName('foodmenu__item--section');
-  sidenavBtnClose = document.querySelector(".sidenav__button--close"),
+sidenavBtnClose = document.querySelector(".sidenav__button--close"),
   titleAddy = document.querySelector(".restaurant__title--addy"),
   foodMenuClose = document.getElementById("foodmenu-btn-close"),
   mealMenu = document.getElementById("restaurant-navigation"),
@@ -69,3 +69,16 @@ for (i = 0; i < foodMenuItem.length; i++) {
     foodMenu.style.WebkitAlignItems = "flex-start";
   });
 }
+
+
+
+var hamburgerMenu = document.getElementById('nav-icon4');
+
+
+hamburgerMenu.onclick = () => {
+  hamburgerMenu.classList.toggle('open');
+  lockArff();
+}
+
+
+
