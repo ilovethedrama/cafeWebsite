@@ -334,7 +334,6 @@ footer {
   background: hsl(36, 37%, 75%);
   text-align: center;
   justify-content: space-between;
-  padding: 0px 100px;
 }
 
 footer > div {
@@ -347,11 +346,13 @@ footer > div {
   padding: 30px;
   flex-flow: row wrap;
   justify-content: center;
+  padding-left:30%;
   list-style-type: none;
 }
 
 .generalInfo {
   font-size: 2rem;
+  flex-grow: .5;
 }
 
 .sitemap-section a {
@@ -650,6 +651,9 @@ display: none;
     background: pink;
     padding: 2rem;
  }
+ .sitemap-section {
+  flex-flow:column;
+    }
    
 }
 
@@ -716,6 +720,8 @@ display: none;
     padding-top: 20px;
     line-height: 50px;
   }
+
+ 
 
   .restaurant__title--addy {
     display: none;
