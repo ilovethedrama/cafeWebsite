@@ -52,15 +52,6 @@ foodMenuClose.onclick = () => {
 }
 
 
-const starters = document.getElementById('starterSection')
-
-
-
-
-
-
-
-
 for (i = 0; i < foodMenuItem.length; i++) {
   foodMenuItem[i].addEventListener("click", function () {
     this.nextElementSibling.classList.toggle('hideIt')
@@ -77,7 +68,7 @@ var hamburgerMenu = document.getElementById('nav-icon4');
 
 hamburgerMenu.onclick = () => {
   hamburgerMenu.classList.toggle('open');
-  lockArff();
+
 }
 
 
