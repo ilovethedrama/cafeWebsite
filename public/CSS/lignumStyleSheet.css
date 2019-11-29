@@ -135,6 +135,77 @@ font-size:3rem;
   display: none;
 }
 
+
+#intro::before {
+content:'';
+  min-width: 30%;
+height: 450px;
+width: 600px;
+z-index: -2;
+position: absolute;
+background: no-repeat 40% 0% url(../Media/chicken.jpg);
+background-size: cover;
+top:-45%;
+left: -15%;
+}
+
+#order::after {
+content:'';
+  min-width: 30%;
+min-height: 30%;
+height: 500px;
+width: 400px;
+z-index: -2;
+position: absolute;
+background: no-repeat 25% 0% url(../Media/chicken.jpg);
+background-size: cover;
+top:-38%;
+left: 34%;
+}
+
+#openingTimes::after {
+  content:'';
+    min-width: 30%;
+  min-height: 30%;
+  height: 350px;
+  width: 400px;
+  z-index: -2;;
+  position: absolute;
+  background: no-repeat 25% 0% url(../Media/chicken.jpg);
+  background-size: cover;
+  top: -38%;
+  left: 18%;
+  }
+
+  #events::before {
+    content:'';
+      min-width: 30%;
+    min-height: 30%;
+    height: 300px;
+    width: 250px;
+    z-index: -2;
+    position: absolute;
+    background: no-repeat 25% 0% url(../Media/chicken.jpg);
+    background-size: cover;
+    top: 49%;
+    left: -27%;
+    }
+
+
+    #about::after {
+      content:'';
+        min-width: 30%;
+      min-height: 30%;
+      height: 200px;
+      width: 250px;
+      z-index: -2;
+      position: absolute;
+      background: no-repeat 25% 0% url(../Media/chicken.jpg);
+      background-size: cover;
+      top: 48%;
+      left: 81%;
+      }
+
 .restaurant-info__text--highlight {
   /* color: rgba(231, 164, 64); */
   color: blanchedalmond;
@@ -146,7 +217,7 @@ font-size:3rem;
 
 
 .restaurant-info {
-  min-width: 100%;
+  min-width: 100vh;
   scroll-snap-align: start;
   overflow: hidden;
   z-index: 2000;
@@ -198,6 +269,7 @@ font-size:3rem;
   height: 100%;
   object-fit: cover;
   width: 100%;
+  /* opacity: .4; */
 }
 
 .restaurant-info-content-container {
@@ -213,6 +285,7 @@ font-size:3rem;
   left: 30%;
   padding: 5%;
   height: 100%;
+  z-index: 1;
 }
 
 .restaurant-info-content-container .restaurant-info__text {
@@ -227,6 +300,7 @@ font-size:3rem;
 .restaurant-info__text p {
   display: inline;
   font: 3.5rem norwester;
+  line-height: 1.04;
   color: blanchedalmond;
   transition: ease font 0.5s;
   background-color: black;
@@ -236,6 +310,21 @@ font-size:3rem;
   height: 100%;
   width: 100%;
   object-fit: cover;
+  position: initial;
+    z-index: 1;
+}
+
+.restaurant-info__img, .restaurant-navigation__vid--large {
+  opacity: .3;
+}
+
+
+.content__overlay--yellow {
+  background-color: rgba(252, 216, 117, 0.863);
+  position: absolute;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
 }
 
 strong {
@@ -411,7 +500,7 @@ footer > div {
 }
 
 .foodmenu__item a {
-  font: 5rem miniver;
+  font: 4.5rem miniver;
   transition: all ease 0.5s;
   /* text-decoration: underline; */
 }
@@ -463,6 +552,12 @@ a[name="orderFoodPart"] div {
 ////////////////////////////////////////////
  */
 
+ @media screen and (max-width: 1370px) {
+  .restaurant-navigation__link--shadow {
+font-size: 1.5rem;
+  }
+ }
+ 
 @media screen and (max-width: 1110px) {
   header {
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
@@ -478,6 +573,22 @@ a[name="orderFoodPart"] div {
     object-fit: cover;
   }
 
+  .content__overlay--yellow {
+display: none;
+  }
+
+  .foodmenu__item a {
+    font-size: 3.5rem;
+  }
+
+
+  .restaurant-info__img, .restaurant-navigation__vid--large {
+    opacity: 1;
+  }
+
+  #intro::before, #about::after, #events::before, #events::after, #order::after, #openingTimes::after {
+    display: none;
+  }
 
   .restaurant__title--name {
     font-size: 3rem;
@@ -493,8 +604,7 @@ a[name="orderFoodPart"] div {
   }
 
   .restaurant-info-content-container .restaurant-info__text {
-    border: 20px solid aquamarine;
-    background-color: aquamarine;
+
     position: relative;
     line-height: 0px;
   }
@@ -504,6 +614,7 @@ a[name="orderFoodPart"] div {
     background-color: aquamarine;
     display: block;
     font-size: 3rem;
+    padding: 20px;
     /* font-size: calc(3rem + (9 - 3) * ((100vw - 600px) / (1100 - 600))); */
   }
 
@@ -583,10 +694,6 @@ a[name="orderFoodPart"] div {
   .restaurant-navigation__link--shadow {
     display: none;
   }
-
-  /* .restaurant-info__text {
-    margin-left: 20%;
-  } */
 
   .foodmenu__item a {
     font-size: 3.5rem;
@@ -714,7 +821,7 @@ a[name="orderFoodPart"] div {
   display: block;
   position: absolute;
   height: 3px;
-  width: 100%;
+  width: 50%;
   background: black;
   border-radius: 0px;
   opacity: 1;
@@ -735,11 +842,11 @@ a[name="orderFoodPart"] div {
 
 
 #nav-icon4 span:nth-child(1) {
-  top: 0px;
-  -webkit-transform-origin: left center;
-  -moz-transform-origin: left center;
-  -o-transform-origin: left center;
-  transform-origin: left center;
+  top: 10px;
+  -webkit-transform-origin: bottom left;
+  -moz-transform-origin: bottom left;
+  -o-transform-origin: bottom left;
+  transform-origin: bottom left;
 }
 
 #nav-icon4 span:nth-child(2) {
@@ -751,11 +858,11 @@ a[name="orderFoodPart"] div {
 }
 
 #nav-icon4 span:nth-child(3) {
-  top: 36px;
-  -webkit-transform-origin: left center;
-  -moz-transform-origin: left center;
-  -o-transform-origin: left center;
-  transform-origin: left center;
+  top: 26px;
+  -webkit-transform-origin: top left;
+  -moz-transform-origin: top left;
+  -o-transform-origin: top left;
+  transform-origin: top left;
 }
 
 #nav-icon4.open span:nth-child(1) {
@@ -763,8 +870,8 @@ a[name="orderFoodPart"] div {
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
-  top: -3px;
-  left: 8px;
+  top: 3px;
+  left: 5px;
 }
 
 #nav-icon4.open span:nth-child(2) {
@@ -777,8 +884,8 @@ a[name="orderFoodPart"] div {
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  top: 39px;
-  left: 8px;
+  top: 25px;
+  left: 5px;
 }
 }
 
