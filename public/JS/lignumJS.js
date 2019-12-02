@@ -32,6 +32,10 @@ function closeNav() {
   header.style.marginLeft = "0";
 }
 
+function showMenu() {
+  mealMenu.classList.toggle('restaurant-navigation__on');
+}
+
 for (var i = 0; i < restNavLinks.length; i++) {
   restNavLinks[i].onclick = function () {
     lockArff();
@@ -45,6 +49,7 @@ sidenavBtnClose.onclick = function () {
 menuOption.onclick = function () {
   openNav();
 };
+
 
 foodMenuClose.onclick = () => {
   foodMenu.style.alignItems = "center";
@@ -68,7 +73,7 @@ var hamburgerMenu = document.getElementById('nav-icon4');
 
 hamburgerMenu.onclick = () => {
   hamburgerMenu.classList.toggle('open');
-
+  showMenu();
 }
 
 

@@ -198,7 +198,6 @@ left: 34%;
 
 
 .restaurant-info {
-  min-width: 100vh;
   scroll-snap-align: start;
   overflow: hidden;
   z-index: 2000;
@@ -294,18 +293,18 @@ left: 34%;
     z-index: 1;
 }
 
-.restaurant-info__img, .restaurant-navigation__vid--large {
+/* .restaurant-info__img, .restaurant-navigation__vid--large {
   opacity: .3;
-}
+} */
 
 
-.content__overlay--yellow {
+/* .content__overlay--yellow {
   background-color: rgba(159,112,95, 0.3);
   position: absolute;
   z-index: 0;
   width: 100vw;
   height: 100vh;
-}
+} */
 
 strong {
   color: blanchedalmond;
@@ -699,14 +698,22 @@ display: none;
   }
 
   .restaurant-navigation {
-    padding: 0px;
+    padding: 50% 0;
     flex-grow: 2;
     justify-content: center;
-    /* display: none; */
+    display: none;
+    opacity: 0;
+    border-bottom: 3px solid black;
+    margin-bottom: 100px;
+    border-width: 50%;
   }
- 
+  
+  .restaurant-navigation__on {
+    display: block;
+    opacity: 1;
+  }
+
   .restaurant-navigation__link a {
-    font-size: 1.3rem;
     font-weight: normal;
   }
 
@@ -733,7 +740,7 @@ display: none;
   }
 
   header {
-    justify-content: space-evenly;
+    justify-content: flex-start;
   }
 
   .text-container {
@@ -787,7 +794,7 @@ display: none;
 #nav-icon4 {
   width: 60px;
   position: relative;
-  margin: 50px auto;
+  margin: 35%;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -797,7 +804,7 @@ display: none;
   -o-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   cursor: pointer;
-  display:none;
+  /* display:none; */
 }
 
 #nav-icon4 span {
