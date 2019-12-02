@@ -898,6 +898,20 @@ display: none;
     line-height: 1.5rem;
   }
 
+  .foodmenu__item a {
+    font-size: 1.5rem;
+  }
+  
+  .foodmenu__item--choice {
+    line-height: 1.75rem;
+    font-size: .75rem;
+  }
+
+  .foodmenu__item--section {
+    margin-top: 1rem;
+    padding-top:0px;
+  }
+
   .restaurant-navigation__link {
     padding: 8px 0px;
   }
