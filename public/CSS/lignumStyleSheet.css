@@ -173,20 +173,15 @@ left: 34%;
     left: 77%;
     }
 
-
-    /* #about::after {
-      content:'';
-        min-width: 30%;
-      min-height: 30%;
-      height: 200px;
-      width: 250px;
-      z-index: -2;
+    .foodmenu__imageBorder{
+      background-image: url(../Media/pineapple.jpg);
       position: absolute;
-      background: no-repeat 25% 0% url(../Media/chicken.jpg);
+      height: 100vh;
+      width: 100%;
+      opacity: 0.1;
       background-size: cover;
-      top: 48%;
-      left: 81%;
-      } */
+      background-repeat: no-repeat;
+    }
 
 .restaurant-info__text--highlight {
   color: blanchedalmond;
@@ -195,6 +190,7 @@ left: 34%;
 .hideIt {
   display: none;
 }
+
 
 
 .restaurant-info {
@@ -293,9 +289,9 @@ left: 34%;
     z-index: 1;
 }
 
-/* .restaurant-info__img, .restaurant-navigation__vid--large {
-  opacity: .3;
-} */
+.restaurant-info__img, .restaurant-navigation__vid--large {
+  opacity: .7;
+}
 
 
 /* .content__overlay--yellow {
@@ -530,7 +526,7 @@ a[name="orderFoodPart"] div {
 
  @media screen and (max-width: 1370px) {
   .restaurant-navigation__link--shadow {
-font-size: 1.5rem;
+font-size: 24px
   }
  }
  
