@@ -312,8 +312,8 @@ header {
   top: 0;
   padding: 10px;
   z-index: 10;
-  background: blanchedalmond;
-  display: flex;
+background:blanchedalmond;
+display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
   clip-path: polygon(0% 0%, 100% 0%, 70% 100%, 0% 100%);
@@ -323,8 +323,6 @@ header {
   overflow: none;
   min-width: 120px;
   min-height: 100vh;
-
-
 }
 
 footer {
@@ -749,6 +747,8 @@ display: none;
 
   header {
     justify-content: flex-start;
+    background-image: linear-gradient(blanchedalmond,blanchedalmond,blanchedalmond, transparent);
+background-color:transparent
   }
 
   .text-container {
@@ -780,10 +780,6 @@ display: none;
   }
 
   .social-media-menu {
-    /* width: auto;
-    flex-flow: column wrap;
-    padding: 0px 20px;
-    align-content: center; */
     display:none;
   }
 
