@@ -19,7 +19,7 @@ const browserSync = require("browser-sync").create(),
         .pipe(uglifycss({
             'uglyComments': true
         }))
-        .pipe(gulp.dest('./producki/'))
+        .pipe(gulp.dest('public/CSS/dist'))
 }
 
 let thePausinator;
@@ -44,7 +44,7 @@ const bSync = () => {
 
 
 const smallerJS = (done) => {
-    gulp.src('public/JS/lash.js')
+    gulp.src('public/JS/lignumJS.js')
         .pipe(minify())
         .pipe(gulp.dest('public/JS/dist'))
     done();
