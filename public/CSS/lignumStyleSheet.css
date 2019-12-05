@@ -174,13 +174,14 @@ left: 34%;
     }
 
     .foodmenu__imageBorder{
-      background-image: url(../Media/pineapple.jpg);
+      background-image: url(../Media/drink1.jpg);
       position: absolute;
       height: 100vh;
       width: 100%;
-      opacity: 0.1;
+      opacity: 0.5;
       background-size: cover;
       background-repeat: no-repeat;
+      z-index: -1;
     }
 
 .restaurant-info__text--highlight {
@@ -322,44 +323,41 @@ header {
   overflow: none;
   min-width: 120px;
   min-height: 100vh;
+
+
 }
 
 footer {
   display: flex;
-  background: hsl(36, 37%, 75%);
-  text-align: center;
-  justify-content: space-between;
+  background:rgba(231, 164, 64);
+  text-align: right;
+  padding-left: 30%;
+  justify-content: flex-end;
+  background-image: url(../Media/drink1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-footer > div {
-  font-size: 2rem;
-  width: 100%;
-}
+
 
 .sitemap-section {
+  width: auto;
   display: flex;
-  padding: 30px;
+  margin: 20px;
+  padding-left: 30px;
   flex-flow: row wrap;
   justify-content: center;
-  padding-left:30%;
   list-style-type: none;
 }
 
-.generalInfo {
-  font-size: 2rem;
-  flex-grow: .5;
-}
-
-.sitemap-section a {
+.sitemap-section__link {
   text-decoration: none;
   color: black;
   padding: 10px 20px;
   font: 1rem norwester;
+  text-transform: uppercase;
 }
 
-.sitemap-section a:hover {
-  color: blanchedalmond;
-}
 
 .foodmenu__btn--close a:hover {
   color: blanchedalmond;
@@ -399,6 +397,8 @@ footer > div {
   opacity: 0;
 }
 
+
+
 .foodmenu__btn--close a {
   font-size: 8rem;
   font-weight: 900;
@@ -414,7 +414,6 @@ footer > div {
   z-index: 3;
   top: 0;
   left: 0;
-  background-color: blanchedalmond;
   background-color: rgba(231, 164, 64);
   overflow-x: hidden;
   transition: 0.5s;
@@ -423,7 +422,14 @@ footer > div {
   display: flex;
   justify-content: center;
   align-items: center;
+  
+
+
+
 }
+
+
+
 
 .foodmenuContainer {
   width: auto;
@@ -575,6 +581,8 @@ display: none;
     width: 100%;
   }
 
+
+
   .restaurant-info-content-container .restaurant-info__text {
 
     position: relative;
@@ -635,9 +643,6 @@ display: none;
     font: 2.5rem norwester;
   }
 
-/* .restaurant-info__text {
-    margin-left: 10%;
-  } */
 .error__text--backButton {
     font-size:2rem;
   }
@@ -693,13 +698,20 @@ display: none;
     text-align: center;
   }
 
+
+  footer {
+    justify-content: space-evenly;
+  }
+
+  .sitemap-section {
+    text-align:center;
+  }
   .restaurant-navigation {
     padding: 50% 0;
     flex-grow: 2;
     justify-content: center;
     display: none;
     opacity: 0;
-    border-bottom: 3px solid black;
     margin-bottom: 100px;
     border-width: 50%;
   }
@@ -892,6 +904,8 @@ display: none;
   .restaurant-info__text p {
     font-size: 1rem;
     line-height: 1.5rem;
+    min-height: 50%;
+    margin: 5%
   }
 
   .foodmenu__item a {
